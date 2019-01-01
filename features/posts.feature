@@ -7,11 +7,11 @@ Feature: create and view posts
 Background: posts in database
 
   Given the following posts exist:
-  | post_id      | channel_id   | title        | content
-  | 1            | 1            | Doggo        | image
-  | 2            | 1            | Dog video!   | www.dogs.com/video
-  | 3            | 2            | Kitten       | image
-  | 4            | 2            | Kitten Link  | www.cats.com
+  | post_id      | channel_id   | user_id  | title        | content              | votes
+  | 1            | 1            | 1        | Doggo        | image                | 12
+  | 2            | 1            | 2        | Dog video!   | www.dogs.com/video   | 0
+  | 3            | 2            | 3        | Kitten       | image                | 1
+  | 4            | 2            | 4        | Cat Link     | www.cats.com         | 3
 
 Scenario: view a post
   Given: I am following the dogs channel
