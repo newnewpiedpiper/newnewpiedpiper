@@ -7,11 +7,11 @@ Feature: create and view posts
 Background: posts in database
 
   Given the following posts exist:
-  | post_id      | title        | 
-  | 1            | Doggo        |
-  | 2            | Video        | 
-  | 3            | Cat          | 
-  | 4            | Picture      | 
+  | post_id      | channel_id   | title        | content
+  | 1            | 1            | Doggo        | image
+  | 2            | 1            | Dog video!   | www.dogs.com/video
+  | 3            | 2            | Kitten       | image
+  | 4            | 2            | Kitten Link  | www.cats.com
 
 Scenario: view a post
   Given: I am following the dogs channel
@@ -27,7 +27,7 @@ Scenario: create a post
 Scenario: edit a post
   Given I am on a post page
   And I am the creator
-  And it was created less than 5 minutes ago
+  And the post was created less than 5 minutes ago
   When I click the edit post button
   And I fill in "Title" with "New Title"
   And I press "Save Changes"
