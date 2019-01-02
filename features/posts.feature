@@ -36,3 +36,13 @@ Scenario: edit a post
   Then I should be on the "Doggo" post page
   And I should see "New Title"
 
+Scenario: tagging a post
+  Given I am on the dogs channel page
+  When I click the add post button
+  And I fill in "Title" with "New Dog"
+  And I fill in "Content" with "newdogs.com"
+  And I fill in "Tags" with "dog, puppy, cute, little"
+  And I press "Post"
+  When I search "cute little puppy"
+  Then I should see the post "New Dog"
+

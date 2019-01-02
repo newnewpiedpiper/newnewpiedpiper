@@ -1,10 +1,12 @@
-html, body {
-  margin: 0;
-  padding: 0;
-  background: White;
-  color: DarkSlateGrey;
-  font-family: Tahoma, Verdana, sans-serif;
-  font-size: 10pt;
+@import url("//fonts.googleapis.com/css?family=Raleway");
+html,body {
+        margin: 0;
+        margin-bottom: 25px;
+        padding: 0;
+        background-color: #f0f0f0;
+        font-family: "Raleway";
+        font-size: 13px;
+        color: #333;
 }
 h2 {
   margin: 1em 0 .5em;
