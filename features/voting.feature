@@ -15,13 +15,13 @@ Background: posts in database
 
 Scenario: upvote a post
   Given I am on the home page
-  When I click the upvote arrow on a post
-  Then the post upvotes increments by one
+  When I click the upvote arrow on the "Doggo" post
+  Then the "Doggo" post upvotes increments by one
   
 Scenario: downvote a post
   Given I am on the home page
-  When I click the downvote arrow on a post
-  Then the post upvotes decrements by one
+  When I click the downvote arrow on the post "Cat Link"
+  Then the "Cat Link" post upvotes decrements by one
   
 Scenario: negative votes
   Given I am on the home page

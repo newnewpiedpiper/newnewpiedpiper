@@ -16,21 +16,23 @@ Background: posts in database
 Scenario: view a post
   Given: I am following the dogs channel
   When I go to the home page
-  Then I should see the post <post id>
+  Then I should see the post "Doggo"
 
 Scenario: create a post
   Given I am on the dogs channel page
-  When  I click the add post button
+  When I click the add post button
   And I fill in "Title" with "Dog"
-  And 
+  And I fill in "Content" with "dogs.com"
+  And I press "Post"
+  Then I should see the post "Dog"
 
 Scenario: edit a post
-  Given I am on a post page
-  And I am the creator
-  And the post was created less than 5 minutes ago
+  Given I am on the "Doggo" post page
+  And I am the creator of the "Doggo" post
+  And the "Doggo" post was created less than 5 minutes ago
   When I click the edit post button
   And I fill in "Title" with "New Title"
   And I press "Save Changes"
-  Then I should be on the post page
+  Then I should be on the "Doggo" post page
   And I should see "New Title"
 
