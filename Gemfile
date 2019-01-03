@@ -5,6 +5,10 @@ gem 'rails', '4.2.10'
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
+# debugging failure to connect to rails server using: 
+# https://devcenter.heroku.com/articles/ruby-support#injected-plugins
+gem 'rails_12factor'
+
 # for Heroku deployment - as described in Ap. A of ELLS book
 group :development, :test do
   gem 'sqlite3'
@@ -36,7 +40,7 @@ gem 'uglifier', '>= 2.7.1'
 gem 'jquery-rails'
 gem 'haml'
 gem 'turbolinks'
-gem 'pg'
+
 # Use unicorn as the web server
 # gem 'unicorn'
 
