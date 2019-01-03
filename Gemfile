@@ -23,7 +23,7 @@ group :test do
   gem 'simplecov', :require => false
 end
 group :production do
-  gem 'pg'
+ # gem 'pg'
   gem 'rails_12factor' #https://github.com/heroku/rails_12factor
 end
 
