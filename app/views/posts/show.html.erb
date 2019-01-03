@@ -1,5 +1,17 @@
-<%= link_to 'Back', :back %><h1><%= @post.title %></h1>
+<div class="post_page">
+<div class="main_post_content">
+<div class="main_post_item">
+<%= link_to 'Back', :back %>
+<h1><%= @post.title %></h1>
 <h3>
 <%= @post.content %>
 </h3>
 <img class="post_image" src="<%= @post.link %>"></img>
+</div>
+</div>
+<div class="comments">
+<center><h3>Comments</h3></center>
+<p class=comment>Test Comment!</p>
+<p class=comment>Agreed</p>
+</div>
+</div>
