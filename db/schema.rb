@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190102033704) do
+ActiveRecord::Schema.define(version: 20190103010823) do
 
   create_table "channels", force: :cascade do |t|
     t.string "channel_name"
@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 20190102033704) do
     t.integer  "channel_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "link"
   end
 
   create_table "users", force: :cascade do |t|
