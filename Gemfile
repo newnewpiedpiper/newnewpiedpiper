@@ -36,6 +36,7 @@ gem 'uglifier', '>= 2.7.1'
 gem 'jquery-rails'
 gem 'haml'
 gem 'turbolinks'
+gem 'pg'
 # Use unicorn as the web server
 # gem 'unicorn'
 
