@@ -65,4 +65,12 @@ box-shadow: 0px 0px 40px -5px rgba(0,0,0,0.3);
 .votes{
     float: right;
     display:block;
+    text-align: right;
+}
+.photo_post_tile{
+    display: block;
+}
+.comment_input{
+    position: absolute;
+     bottom: -35px;
 }

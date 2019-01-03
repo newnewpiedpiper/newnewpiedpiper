@@ -13,5 +13,11 @@
 <center><h3>Comments</h3></center>
 <p class=comment>Test Comment!</p>
 <p class=comment>Agreed</p>
+<div class="comment_input">
+<%= form_tag("/search", method: "get") do %>
+  <%= text_field_tag(:q) %>
+  <%= submit_tag("Comment") %>
+<% end %>
+</div>
 </div>
 </div>
