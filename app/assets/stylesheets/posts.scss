@@ -8,10 +8,19 @@
     background-color: white;
     margin-bottom:20px;
     border-radius: 6px;
+    display: inline-block;
+    margin:10px;
 }
 .post_item:hover{
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 .post_item a{
     all: unset;
+}
+.masonry { /* Masonry container */
+    column-gap: 15px;
+    column-width: auto;
+}
+.post_image{
+    max-width: 50%;
 }

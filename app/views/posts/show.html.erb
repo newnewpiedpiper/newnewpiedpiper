@@ -1,7 +1,5 @@
-<h1>Showing selected post</h1>
-<p>
- Title: <%= @post.title %>
-</p>
-<p>
- content: <%= @post.content %>
-</p>
+<%= link_to 'Back', :back %><h1><%= @post.title %></h1>
+<h3>
+<%= @post.content %>
+</h3>
+<img class="post_image" src="<%= @post.link %>"></img>

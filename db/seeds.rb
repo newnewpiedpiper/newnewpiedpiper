@@ -21,8 +21,11 @@
 #   Channel.create!(channel)
 # end
 
-posts = [{:title => 'Doggo', :content=> 'Dogs are the best animal', :votes => '25', :user_id => '1', :channel_id => '1'},
-    	 {:title => 'Cat', :content=> 'Cats are the best animal', :votes => '24', :user_id => '2', :channel_id => '2'},
+posts = [{:title => 'Doggo', :content=> 'Dogs are the best animal', :votes => '25', :user_id => '1', :channel_id => '1', :link =>'https://static.scientificamerican.com/sciam/cache/file/D059BC4A-CCF3-4495-849ABBAFAED10456_source.jpg?w=590&h=800&526ED1E1-34FF-4472-B348B8B4769AB2A1'},
+    	 {:title => 'Puppies', :content=> 'Puppies are so small!', :votes => '24', :user_id => '2', :channel_id => '2'},
+    	 {:title => 'Cat', :content=> 'Cats are the best animal', :votes => '24', :user_id => '2', :channel_id => '2', :link =>'https://r.hswstatic.com/w_907/gif/tesla-cat.jpg'},
+  	   {:title => 'Funny Cats', :content=> 'Cats are really funny', :votes => '28', :user_id => '2', :channel_id => '2'},
+
   	 ]
 
 posts.each do |post|
