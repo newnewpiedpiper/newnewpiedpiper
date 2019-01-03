@@ -20,3 +20,15 @@ html,body {
         background-color:#f4f4f4;
         margin:0px;
 }
+header{
+    background-color:#4980af;
+    color: white;
+    height: 60px;
+    font-size: 45px;
+}
+a{
+    color:#5d9cd3;
+}
+a:hover{
+    color: #4980af;
+}
