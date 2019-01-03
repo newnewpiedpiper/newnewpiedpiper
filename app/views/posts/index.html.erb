@@ -1,0 +1,9 @@
+<center><h1>Sling</h1></center>
+ <% @posts.each do |post| %>
+ <div class="post_item">
+ <a href=<%= post_path(post) %>>
+  <h2><%= post.title %></h2>
+  <h3><%= post.content %></h3>
+ </div>
+ </a>
+ <% end %>

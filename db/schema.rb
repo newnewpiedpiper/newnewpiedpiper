@@ -11,6 +11,31 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20190102033704) do
+
+  create_table "channels", force: :cascade do |t|
+    t.string "channel_name"
+    t.text   "channel_description"
+    t.text   "channel_guidlines"
+    t.string "moderators"
+  end
+
+  create_table "posts", force: :cascade do |t|
+    t.string   "title"
+    t.text     "content"
+    t.integer  "votes"
+    t.integer  "user_id"
+    t.integer  "channel_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string   "username"
+    t.string   "email"
+    t.text     "password"
+    t.string   "subscriptions"
+    t.datetime "date"
+  end
 
 end

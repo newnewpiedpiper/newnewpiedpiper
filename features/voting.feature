@@ -16,12 +16,12 @@ Background: posts in database
 Scenario: upvote a post
   Given I am on the home page
   When I click the upvote arrow on the "Doggo" post
-  Then the "Doggo" post upvotes increments by one
+  Then the "Doggo" post upvotes should equal 13
   
 Scenario: downvote a post
   Given I am on the home page
   When I click the downvote arrow on the post "Cat Link"
-  Then the "Cat Link" post upvotes decrements by one
+  Then the "Cat Link" post upvotes should equal 2
   
 Scenario: negative votes
   Given I am on the home page
