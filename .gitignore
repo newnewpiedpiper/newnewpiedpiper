@@ -15,3 +15,6 @@
 /log/*
 !/log/.keep
 /tmp
+
+# From .bundle/config
+BUNDLE_WITHOUT: "production"

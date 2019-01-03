@@ -5,6 +5,7 @@ gem 'rails', '4.2.10'
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
+
 # for Heroku deployment - as described in Ap. A of ELLS book
 group :development, :test do
   gem 'sqlite3'
@@ -23,6 +24,7 @@ group :test do
 end
 group :production do
   gem 'pg'
+  gem 'rails_12factor' #https://github.com/heroku/rails_12factor
 end
 
 # Gems used only for assets and not required
@@ -36,6 +38,7 @@ gem 'uglifier', '>= 2.7.1'
 gem 'jquery-rails'
 gem 'haml'
 gem 'turbolinks'
+
 # Use unicorn as the web server
 # gem 'unicorn'
 
