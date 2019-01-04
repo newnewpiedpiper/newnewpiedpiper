@@ -1,13 +1,12 @@
-<center><h1>Sling</h1></center>
 <div class="masonry">
  <% @posts.each do |post| %>
  <div class="post_item">
  <a href=<%= post_path(post) %>>
-  <h2><%= post.title %></h2>
+  <h2><%= post.title %></h2> </a>
   <h3><%= post.content %></h3>
-  <img src="<%= post.link %>"></img>
-  <div class="votes">▲<%= post.votes %>▼</div>
+  <img class="photo_post_tile" src="<%= post.link %>"></img>
+  <div class="votes">▲ <%= post.votes %> ▼</div>
  </div>
- </a>
+
  <% end %>
  </div>

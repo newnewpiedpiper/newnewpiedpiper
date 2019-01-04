@@ -7,11 +7,18 @@
 <%= @post.content %>
 </h3>
 <img class="post_image" src="<%= @post.link %>"></img>
+<div class="votes">▲ <%= @post.votes %> ▼</div>
 </div>
 </div>
 <div class="comments">
 <center><h3>Comments</h3></center>
 <p class=comment>Test Comment!</p>
 <p class=comment>Agreed</p>
+<div class="comment_input">
+<%= form_tag("/search", method: "get") do %>
+  <%= text_field_tag(:q) %>
+  <%= submit_tag("Comment") %>
+<% end %>
+</div>
 </div>
 </div>
