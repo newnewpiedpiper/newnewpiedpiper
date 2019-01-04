@@ -7,7 +7,7 @@ class PostsController < ApplicationController
     end
     def create
       #render plain: params[:post].inspect
-      @post = post.new(post_params)
+      @post = Post.new(post_params)
       @post.save
       redirect_to posts_show(@post)
     end
