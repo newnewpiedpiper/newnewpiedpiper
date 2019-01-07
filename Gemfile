@@ -5,6 +5,7 @@ gem 'rails', '4.2.10'
 gem 'bcrypt',         '3.1.12'
 gem 'bootstrap-sass'
 gem 'bootstrap'
+gem 'puma'
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
