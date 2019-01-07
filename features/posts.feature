@@ -20,13 +20,12 @@ Scenario: view a post
 
 Scenario: create a post
   Given I am at the home page
-  When I click the sidebar
-  Then I should see "Create new post"
-  # And I follow "Create new post"
-  # And I fill in "Title" with "Dog"
-  # And I fill in "Content" with "dogs.com"
-  # And I press "Post"
-  # Then I should see the post "Dog"
+  When I follow "Create new post" from the sidebar
+  # Then I should see "Dog"
+  And I fill in "Title" with "Dog"
+  And I fill in "Content" with "dogs.com"
+  And I press "Create Post"
+  Then I should see the post "Dog"
 
 Scenario: edit a post
   Given I am viewing post with id 1

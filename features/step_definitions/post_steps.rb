@@ -19,7 +19,7 @@ Then /^(?:|I )should see the post "([^"]*)"$/ do |text|
 end
 
 When (/^I click the sidebar$/) do
- find(:css, '#sidebar').click
+ find(:css, 'button#sidebar.menu_toggle').click
 end
 
 Given("I am viewing post with id {int}") do |int|
@@ -35,4 +35,8 @@ Given("the post with id {int} was created less than {int} minutes ago") do |int,
   post = Post.find_by(id: int)
   time = Time.new
   expect(time-post.created_at).to be <= c_time
+end
+
+When("I follow {string} from the sidebar") do |string|
+  page.find('#create_post', visible: :all).click
 end
