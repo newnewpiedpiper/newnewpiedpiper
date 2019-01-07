@@ -7,11 +7,11 @@ Feature: create and view posts
 Background: posts in database
 
   Given the following posts exist:
-  | title         | content                     | votes   | user_id | channel_id  | link                                                                                                                                                      |
-  | 'Doggo'       | 'Dogs are the best animal'  | 25      | 1       | 1           | 'https://static.scientificamerican.com/sciam/cache/file/D059BC4A-CCF3-4495-849ABBAFAED10456_source.jpg?w=590&h=800&526ED1E1-34FF-4472-B348B8B4769AB2A1'   |
-  | 'Puppies'     | 'Puppies are so small!'     | 24      | 2       | 2           |                                                                                                                                                           |
-  | 'Cat'         | 'Cats are the best animal'  | 24      | 2       | 2           | 'https://r.hswstatic.com/w_907/gif/tesla-cat.jpg'                                                                                                         |
-  | 'Funny Cats'  | 'Cats are really funny'     | 28      | 2       | 2           |                                                                                                                                                           |
+  | post_id      | channel_id   | user_id  | title        | content              | votes
+  | 1            | 1            | 1        | Doggo        | image                | 12
+  | 2            | 1            | 2        | Dog video!   | www.dogs.com/video   | 0
+  | 3            | 2            | 3        | Kitten       | image                | 1
+  | 4            | 2            | 4        | Cat Link     | www.cats.com         | 3
 
 Scenario: view a post
   Given: I am following the dogs channel
@@ -37,4 +37,3 @@ Scenario: edit a post
   And I press "Save Changes"
   Then I should be on the "Doggo" post page
   And I should see "New Title"
-
