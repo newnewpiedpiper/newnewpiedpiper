@@ -17,7 +17,7 @@ group :development, :test do
   gem 'capybara', '2.4.4'
   gem 'launchy'
   gem 'rspec-rails', '3.7.2'
-  gem 'ZenTest', '4.11.0'
+  gem 'ZenTest', '4.11.2'
 end
 
 group :test do
@@ -26,7 +26,7 @@ group :test do
   gem 'simplecov', :require => false
 end
 group :production do
-  gem 'pg'
+  gem 'pg', '~> 0.15'
   gem 'rails_12factor' #https://github.com/heroku/rails_12factor
 end
 
