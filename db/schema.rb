@@ -11,14 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190103010823) do
-
-  create_table "channels", force: :cascade do |t|
-    t.string "channel_name"
-    t.text   "channel_description"
-    t.text   "channel_guidlines"
-    t.string "moderators"
-  end
+ActiveRecord::Schema.define(version: 20190107025937) do
 
   create_table "posts", force: :cascade do |t|
     t.string   "title"
@@ -32,11 +25,13 @@ ActiveRecord::Schema.define(version: 20190103010823) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string   "username"
+    t.string   "name"
     t.string   "email"
-    t.text     "password"
-    t.string   "subscriptions"
-    t.datetime "date"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.string   "password_digest"
   end
+
+  add_index "users", ["email"], name: "index_users_on_email", unique: true
 
 end
