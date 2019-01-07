@@ -1,7 +1,7 @@
 <div class="post_page">
 <div class="main_post_content">
 <div class="main_post_item">
-<%= link_to 'Back', :back %>
+<%= link_to "Back", root_path %><br>
 <h1><%= @post.title %></h1>
 <h3>
 <%= @post.content %>
@@ -21,4 +21,5 @@
 <% end %>
 </div>
 </div>
+<%= link_to 'Edit', edit_post_path(@post) %>
 </div>

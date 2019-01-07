@@ -7,11 +7,11 @@ Feature: create and view posts
 Background: posts in database
 
   Given the following posts exist:
-  | post_id      | channel_id   | user_id  | title        | content              | votes
-  | 1            | 1            | 1        | Doggo        | image                | 12
-  | 2            | 1            | 2        | Dog video!   | www.dogs.com/video   | 0
-  | 3            | 2            | 3        | Kitten       | image                | 1
-  | 4            | 2            | 4        | Cat Link     | www.cats.com         | 3
+  | title     | content                      | votes | user_id  | channel_id  | link                                                                                                                                                  |
+  | 'Doggo'   | 'Dogs are the best animal'   | 25    | 1        | 1           | https://static.scientificamerican.com/sciam/cache/file/D059BC4A-CCF3-4495-849ABBAFAED10456_source.jpg?w=590&h=800&526ED1E1-34FF-4472-B348B8B4769AB2A1'|
+  | 'Puppies' | 'Puppies are so small!       | 24    | 1        | 1           |                                                                                                                                                       |
+  #   	 {:title => 'Cat', :content=> 'Cats are the best animal', :votes => '24', :user_id => '2', :channel_id => '2', :link =>'https://r.hswstatic.com/w_907/gif/tesla-cat.jpg'},
+  # 	   {:title => 'Funny Cats', :content=> 'Cats are really funny', :votes => '28', :user_id => '2', :channel_id => '2'
 
 Scenario: view a post
   Given: I am following the dogs channel
@@ -19,30 +19,20 @@ Scenario: view a post
   Then I should see the post "Doggo"
 
 Scenario: create a post
-  Given I am on the dogs channel page
-  When I click the add post button
-  And I fill in "Title" with "Dog"
-  And I fill in "Content" with "dogs.com"
-  And I press "Post"
-  Then I should see the post "Dog"
+  Given I am at the home page
+  When I click the sidebar
+  Then I should see "Create new post"
+  # And I follow "Create new post"
+  # And I fill in "Title" with "Dog"
+  # And I fill in "Content" with "dogs.com"
+  # And I press "Post"
+  # Then I should see the post "Dog"
 
 Scenario: edit a post
-  Given I am on the "Doggo" post page
-  And I am the creator of the "Doggo" post
-  And the "Doggo" post was created less than 5 minutes ago
-  When I click the edit post button
-  And I fill in "Title" with "New Title"
-  And I press "Save Changes"
-  Then I should be on the "Doggo" post page
-  And I should see "New Title"
-
-Scenario: tagging a post
-  Given I am on the dogs channel page
-  When I click the add post button
-  And I fill in "Title" with "New Dog"
-  And I fill in "Content" with "newdogs.com"
-  And I fill in "Tags" with "dog, puppy, cute, little"
-  And I press "Post"
-  When I search "cute little puppy"
-  Then I should see the post "New Dog"
-
+  Given I am viewing post with id 1
+  # And I am the creator of the "Doggo" post
+  And the post with id 1 was created less than 5 minutes ago
+  When I follow "Edit"
+  And I fill in "Title" with "Brown Doggo"
+  And I press "Update Post"
+  Then I should see "Brown Doggo"
