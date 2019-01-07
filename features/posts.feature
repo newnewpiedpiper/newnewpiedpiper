@@ -19,12 +19,14 @@ Scenario: view a post
   Then I should see the post "Doggo"
 
 Scenario: create a post
-  Given I am on the dogs channel page
-  When I click the add post button
-  And I fill in "Title" with "Dog"
-  And I fill in "Content" with "dogs.com"
-  And I press "Post"
-  Then I should see the post "Dog"
+  Given I am on the home page
+  When I click the sidebar
+  Then I should see "Create new post"
+  # And I follow "Create new post"
+  # And I fill in "Title" with "Dog"
+  # And I fill in "Content" with "dogs.com"
+  # And I press "Post"
+  # Then I should see the post "Dog"
 
 Scenario: edit a post
   Given I am on the "Doggo" post page
@@ -35,14 +37,3 @@ Scenario: edit a post
   And I press "Save Changes"
   Then I should be on the "Doggo" post page
   And I should see "New Title"
-
-Scenario: tagging a post
-  Given I am on the dogs channel page
-  When I click the add post button
-  And I fill in "Title" with "New Dog"
-  And I fill in "Content" with "newdogs.com"
-  And I fill in "Tags" with "dog, puppy, cute, little"
-  And I press "Post"
-  When I search "cute little puppy"
-  Then I should see the post "New Dog"
-

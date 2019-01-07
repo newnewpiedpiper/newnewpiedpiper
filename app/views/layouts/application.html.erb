@@ -7,8 +7,15 @@
   <%= csrf_meta_tags %>
 </head>
 <header>
-  <center>Sling</center>
+  <button id=sidebar class="menu_toggle" onclick="w3_open()">☰</button>
+  <div class="site_title"><%= link_to "Sling", root_path %></div>
   </div>
+  <div class="w3-sidebar w3-bar-block w3-border-right" style="display:none" id="mySidebar">
+  <a onclick="w3_close()" class="w3-bar-item w3-large">Close &times;</a><br>
+  <%= link_to "Home", root_path %><br>
+  <a href="#" class="w3-bar-item w3-button">My Account</a><br>
+  <%= link_to "Create new post", new_post_path %><br>
+</div>
 </header>
 
 <%= yield %>
