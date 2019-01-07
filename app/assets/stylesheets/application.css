@@ -39,10 +39,23 @@ w3-border-right {
     height: 100%;
     width: 200px;
     background-color: #fff;
-    position: fixed!important;
+    position: absolute;
+    top: 0px;
     z-index: 1;
     overflow: auto;
+    font-size: 18px;
 }
 .menu_toggle, .menu_toggle:hover{
+    all: unset;
     color:white;
+}
+.site_title
+{
+    text-align: center;
+    display: inline;
+}
+.site_title a
+{
+    color: white;
+    text-decoration: none;
 }

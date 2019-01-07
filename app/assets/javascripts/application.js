@@ -15,12 +15,9 @@
 //= require turbolinks
 //= require_tree .
 //=jquery
-  var sidebar=document.getElementById("mySidebar");
-  $("#menu").click(function(){
-  $(sidebar).toggle();
-});
-
-
+ function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+}
 function w3_close() {
   document.getElementById("mySidebar").style.display = "none";
 }
