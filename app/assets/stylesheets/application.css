@@ -25,6 +25,7 @@ header{
     color: white;
     height: 60px;
     font-size: 45px;
+    padding: 5px;
 }
 a{
     color:#5d9cd3;
@@ -58,4 +59,14 @@ w3-border-right {
 {
     color: white;
     text-decoration: none;
+}
+#sign_up{
+    display: inline-block;
+    float: right;
+    text-align: right;
+    font-size: 18px;
+    color:#aaaaaa;
+}
+.account_section{
+    width:100%;
 }

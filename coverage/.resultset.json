@@ -73,6 +73,13 @@
       ],
       "/home/ubuntu/Ruby/newnewpiedpiper/app/helpers/users_helper.rb": [
         1,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        null,
         null
       ],
       "/home/ubuntu/Ruby/newnewpiedpiper/app/models/user.rb": [
@@ -190,9 +197,35 @@
         null,
         0,
         0,
+        null,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        0,
+        0,
+        null,
+        null,
         0
       ]
     },
-    "timestamp": 1546850154
+    "timestamp": 1546850837
   }
 }
