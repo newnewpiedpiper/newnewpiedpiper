@@ -21,3 +21,18 @@ end
 When (/^I click the sidebar$/) do
  find(:css, '#sidebar').click
 end
+
+Given("I am viewing post with id {int}") do |int|
+  post = Post.find_by(id: int)
+  visit post_path(post)
+end
+
+Given("I am at the home page") do 
+  visit root_path
+end
+
+Given("the post with id {int} was created less than {int} minutes ago") do |int, c_time|  
+  post = Post.find_by(id: int)
+  time = Time.new
+  expect(time-post.created_at).to be <= c_time
+end

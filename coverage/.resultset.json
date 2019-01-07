@@ -20,24 +20,24 @@
         0,
         null,
         1,
-        0,
-        null,
         1,
-        0,
-        0,
-        0,
-        0,
-        null,
-        0,
-        0,
-        null,
-        null,
-        1,
-        0,
         null,
         1,
         1,
+        1,
+        1,
+        1,
+        null,
         0,
+        0,
+        null,
+        null,
+        1,
+        2,
+        null,
+        1,
+        1,
+        1,
         null,
         null
       ],
@@ -67,6 +67,28 @@
       "/home/ubuntu/Ruby/newnewpiedpiper/app/helpers/posts_helper.rb": [
         1,
         null
+      ],
+      "/home/ubuntu/Ruby/newnewpiedpiper/app/helpers/users_helper.rb": [
+        1,
+        null
+      ],
+      "/home/ubuntu/Ruby/newnewpiedpiper/app/models/user.rb": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        null,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        0
       ],
       "/home/ubuntu/Ruby/newnewpiedpiper/app/models/movie.rb": [
         0,
@@ -157,8 +179,17 @@
         0,
         0,
         0
+      ],
+      "/home/ubuntu/Ruby/newnewpiedpiper/app/controllers/users_controller.rb": [
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        0
       ]
     },
-    "timestamp": 1546830006
+    "timestamp": 1546848449
   }
 }
