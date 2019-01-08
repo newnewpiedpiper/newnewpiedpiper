@@ -1,5 +1,5 @@
 module ApplicationHelper
     def logged_in?
-        return !@user.nil?
+        return !@user.email.nil?
     end
 end
