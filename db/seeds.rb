@@ -31,3 +31,12 @@ posts = [{:title => 'Doggo', :content=> 'Dogs are the best animal', :votes => '2
 posts.each do |post|
   Post.create!(post)
 end
+
+users = [
+    { :name => "Vinayak Chetlapalli", :email => "vinayakc@tamu.edu", :password => "laptop07", :password_confirmation =>  "laptop07"}, 
+    { :name => "Sample Hello", :email => "sample@gmail.com", :password => "password", :password_confirmation => "password"},
+]
+
+users.each do |user|
+    User.create!(user)
+end 
