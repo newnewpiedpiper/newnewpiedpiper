@@ -1,4 +1,7 @@
 # newnewpiedpiper
+
+App deployed on Heroku: https://enigmatic-dusk-32706.herokuapp.com/
+
 Scrum Time: 13:00 M-F
 
 Current Roles
