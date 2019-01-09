@@ -1,6 +1,7 @@
 module SessionsHelper
     # Logs in the given user.
   def log_in(user)
+    puts "initial"
     session[:user_id] = user.id
   end
   
@@ -14,6 +15,7 @@ module SessionsHelper
   
    # Returns true if the user is logged in, false otherwise.
   def logged_in?
+    puts "login"
     !current_user.nil?
   end
 end
