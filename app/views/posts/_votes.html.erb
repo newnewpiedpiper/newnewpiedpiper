@@ -1,0 +1,5 @@
+<div id="<%= get_votes_class(@post.id) %>" class="votes">
+ <%= link_to "▲", upvote_post_path(@post.id), method: :put,remote: true, class: "voter"%>  
+ <%= @post.score %>
+  <%= link_to "▼", downvote_post_path(@post.id), method: :put,remote: true, class: "voter" %>  
+</div>
