@@ -22,7 +22,8 @@ Scenario: cant overwrite exisiting account
   And I fill in "Password" with "password"
   And I fill in "Confirmation" with "password"
   And I click the "Create My Account" button
-  And I click the "Sling" button
+  And I click the "sidebar" button
+  And I click the "Log Out" button 
   When I click the "Sign Up" button
   And I fill in "Name" with "Vinayak Chetlapalli"
   And I fill in "Email" with "chetvins@gmail.com"
@@ -33,10 +34,10 @@ Scenario: cant overwrite exisiting account
 
 Scenario: login to existing account
   Given I am on the home page
-  When I click the "Login" button
+  When I click the "Log In" button
   And I fill in "Email" with "chetvins@gmail.com"
   And I fill in "Password" with "laptop07"
-  And I click the "Log in" button
+  And I click the "Log In" button
   Then I should see user profile page for "Vinayak_Chetlapalli"
   
 Scenario: Persistent login
@@ -47,10 +48,10 @@ Scenario: Persistent login
   
 Scenario: delete an existing account
   Given I am on the home page
-  When I click the "Login" button
+  When I click the "Log In" button
   And I fill in "Email" with "dogs@gmail.com"
   And I fill in "Password" with "secret"
-  And I click the "Login" button
+  And I click the "Log In" button
   And I click the "Account" button
   And I click the "Delete Account" button
   And I click "OK"

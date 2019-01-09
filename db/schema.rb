@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190109015939) do
+ActiveRecord::Schema.define(version: 20190109071419) do
 
   create_table "comments", force: :cascade do |t|
     t.text     "body"
@@ -35,22 +35,13 @@ ActiveRecord::Schema.define(version: 20190109015939) do
     t.string   "link"
   end
 
-  create_table "upvotes", force: :cascade do |t|
-    t.integer  "post_id"
-    t.integer  "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  add_index "upvotes", ["post_id"], name: "index_upvotes_on_post_id"
-  add_index "upvotes", ["user_id"], name: "index_upvotes_on_user_id"
-
   create_table "users", force: :cascade do |t|
     t.string   "name"
     t.string   "email"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
     t.string   "password_digest"
+    t.string   "username"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

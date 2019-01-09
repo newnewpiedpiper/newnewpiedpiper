@@ -7,7 +7,7 @@
   <%= csrf_meta_tags %>
 </head>
 <header>
-  <button id=sidebar class="menu_toggle" onclick="w3_open()">☰</button>
+  <button id=sidebar class="menu_toggle" onclick="w3_open()", id = "Side Bar">☰</button>
 
   <div class="site_title"><%= link_to "Sling", root_path, id: "Sling" %></div>
 
@@ -19,10 +19,10 @@
   <% else %>
   
 
-    <%= link_to "Log In", login_path, id:"login" %>
+    <%= link_to "Log In", login_path, id:"Log In" %>
     
 
-  <%= link_to "Sign Up", new_user_path, id:"sign_up" %>
+  <%= link_to "Sign Up", new_user_path, id:"Sign Up" %>
 
   <% end %>
   
@@ -52,7 +52,7 @@
     
     
      
-   <%= link_to "Log out", logout_path, method: :delete %>
+   <%= link_to "Log Out", logout_path, method: :delete, id: "Log Out" %>
     
   <% else %>
    
