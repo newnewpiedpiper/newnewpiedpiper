@@ -15,4 +15,5 @@ class User < ActiveRecord::Base
   validates :password, presence: true, length: { minimum: 6 }
   has_many :favorites, dependent: :destroy
   has_many :comments, dependent: :destroy
+  has_many :upvotes, dependent: :destroy
 end
