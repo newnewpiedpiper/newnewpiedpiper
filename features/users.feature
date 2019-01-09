@@ -6,19 +6,21 @@ Feature: create and login into a user
 Scenario: create a new User
   Given I am on the home page
   When I click the "Sign Up" button
-  And I fill in "Name" with "Sample Name"
+  And I fill in "Name" with "Sample User"
   And I fill in "Email" with "sample1@gmail.com"
+  And I fill in "Username" with "test_username"
   And I fill in "Password" with "password"
   And I fill in "Confirmation" with "password"
   And I click the "Create My Account" button
-  Then I should see user profile page for "Sample_Name"
-  And I should see a "Welcome to the Sample App!" flash
+  Then I should see a success flash
+  And I should see user profile page for "test_username"
 
 Scenario: cant overwrite exisiting account
   Given I am on the home page
   When I click the "Sign Up" button
   And I fill in "Name" with "Vinayak Chetlapalli"
   And I fill in "Email" with "chetvins@gmail.com"
+  And I fill in "Username" with "vin"
   And I fill in "Password" with "password"
   And I fill in "Confirmation" with "password"
   And I click the "Create My Account" button
