@@ -1,10 +1,10 @@
 class CommentsController < ApplicationController
     def create
         @post = Post.find(params[:post_id])
-        if @user.nil?
+        if !logged_in?
             flash[:notice] = "You must be logged in to comment"
         else
-             @comment = @post.comments.create(params[:comment].permit(:body))
+             @comment = @post.comments.create(params[:comment].permit(:body, :user_id))
         end
         redirect_to post_path(@post)
     end

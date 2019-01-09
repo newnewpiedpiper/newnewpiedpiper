@@ -9,8 +9,9 @@
 <img class="post_image" src="<%= @post.link %>"></img>
 
 <div class="votes">
- <%= link_to "Upvote", like_post_path(@post), method: :put %>  
-  <%= link_to "Downvote", dislike_post_path(@post), method: :put %>  
+ <%= link_to "Upvote", upvote_post_path(@post), method: :put %>  
+ <%= @post.score %>
+  <%= link_to "Downvote", downvote_post_path(@post), method: :put %>  
 </div>
 
 </div>
