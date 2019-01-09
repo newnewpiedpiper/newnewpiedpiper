@@ -8,7 +8,9 @@
 </head>
 <header>
   <button id=sidebar class="menu_toggle" onclick="w3_open()">☰</button>
-  <div class="site_title"><%= link_to "Sling", root_path %></div>
+
+  <div class="site_title"><%= link_to "Sling", root_path, id: "Sling" %></div>
+
   
   <% if logged_in? %> 
    
@@ -17,10 +19,9 @@
   <% else %>
   
 
-      <a href="#" class="w3-bar-item w3-button">Log In</a><br>
     <%= link_to "Log In", login_path, id:"login" %>
     
-    <a href="#" class="w3-bar-item w3-button">Sign Up</a><br>
+
   <%= link_to "Sign Up", new_user_path, id:"sign_up" %>
 
   <% end %>
