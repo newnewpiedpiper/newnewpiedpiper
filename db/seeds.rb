@@ -33,8 +33,8 @@ posts.each do |post|
 end
 
 users = [
-    { :name => "Vinayak Chetlapalli", :email => "vinayakc@tamu.edu", :password => "laptop07", :password_confirmation =>  "laptop07"}, 
-    { :name => "Sample Hello", :email => "sample@gmail.com", :password => "password", :password_confirmation => "password"},
+    { :name => "Vinayak Chetlapalli", :email => "vinayakc@tamu.edu", :username => "vin", :password => "laptop07", :password_confirmation =>  "laptop07"}, 
+    { :name => "Sample Account", :email => "sample@gmail.com", :username => "test_username", :password => "password", :password_confirmation => "password"},
 ]
 
 users.each do |user|

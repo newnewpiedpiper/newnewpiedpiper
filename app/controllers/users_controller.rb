@@ -6,13 +6,15 @@ class UsersController < ApplicationController
   end
   
   def show
-    @user = User.find(params[:id])
+    @user = User.find_by_username(params[:username])
   end
   
   def new
     @user = User.new
   end
   
+  def username 
+  end 
   def create
     @user = User.new(user_params)
     if @user.save
@@ -26,7 +28,7 @@ class UsersController < ApplicationController
     private
 
     def user_params
-      params.require(:user).permit(:name, :email, :password,
+      params.require(:user).permit(:name, :username, :email, :password,
                                    :password_confirmation)
     end 
 

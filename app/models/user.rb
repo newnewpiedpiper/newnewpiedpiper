@@ -3,6 +3,8 @@ class User < ActiveRecord::Base
   validates :name, presence: true
   validates :email, presence: true
   validates :name,  presence: true, length: { maximum: 50 }
+  validates :username,  presence: true, length: { maximum: 50 }, 
+                        uniqueness: { case_sensitive: false }
   validates :email, presence: true, length: { maximum: 255 }
   
   
@@ -23,5 +25,7 @@ class User < ActiveRecord::Base
     BCrypt::Password.create(string, cost: cost)
   end
   
-  
+  def to_param
+    username
+  end
 end
