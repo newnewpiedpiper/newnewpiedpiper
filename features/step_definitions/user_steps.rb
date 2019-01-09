@@ -3,11 +3,11 @@ When("I click the {string} button") do |string|
 end
 
 Then("I should see user profile page for {string}") do |string|
-    visit "/user/#{string}"
+    visit "/users/#{string}"
 end 
 
-Then("I should see a {string} flash") do |string|
-    page.should have_css('.flashnotice', text: "#{string}")
+Then("I should see a success flash") 
+    expect(flash[:success]).to be_present
 end
 
 Then("I should see a {string} error") do |string|
