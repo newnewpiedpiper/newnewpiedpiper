@@ -19,6 +19,14 @@ Rails.application.routes.draw do
   resources :posts do
     resources :comments
   end
+  
+  resources :posts do
+    member do
+      put "upvote", to: "posts#upvote"
+      put "downvote", to: "posts#downvote"
+    end
+  end
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -73,4 +81,8 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+  
+
+  
+  
 end

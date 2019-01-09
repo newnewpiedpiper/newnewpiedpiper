@@ -1,5 +1,10 @@
 class Post < ActiveRecord::Base
+  
+  validates :title, length: { minimum: 2 }
+  validates :title, length: { maximum: 200 }
     has_many :comments, dependent: :destroy
-      # dependent: :destroy means the comments related
-      # to the specific post in mention get deleted if the post does.
+    acts_as_votable
+    def score
+        self.get_upvotes.size - self.get_downvotes.size
+    end
 end

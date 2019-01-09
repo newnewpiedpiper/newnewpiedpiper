@@ -1,13 +1,16 @@
-<div class="box">
+<div class="comment">
   <article class="media">
     <div class="media-content">
       <div class="content">
         <p>
-          <%= comment.body %>
+          <%= comment.body %><br>
+          @<%= get_username(comment.user_id) %>
         </p>
       </div>
     </div>
+    <% if check_permissions(comment.user_id) %>
      <%= link_to 'Delete', [comment.post, comment],
                   method: :delete, class: "button is-danger", data: { confirm: 'Are you sure?' } %>
+    <% end %>
   </article>
 </div>

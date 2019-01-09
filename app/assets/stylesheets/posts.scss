@@ -41,6 +41,8 @@
     border-radius: 6px;
     margin:20px;
     margin-top:15px;
+     overflow-y: scroll;
+     position: relative;
 }
 .comment{
     -webkit-box-shadow: 0px 0px 40px -5px rgba(0,0,0,0.3);
@@ -71,12 +73,25 @@ box-shadow: 0px 0px 40px -5px rgba(0,0,0,0.3);
     display: block;
 }
 .comment_input{
-    position: absolute;
-     bottom: 20px;
+   max-height: 50px;
 }
+.comments .comment-form{
+        position: absolute;
+    bottom: 50px;
+    width: 90%;
+}
+
 .create_post{
     font-size: 32px;
     background-color:#00713d;
     color: white;
     border-radius: 100%;
+}
+input#upvote{
+    width: 30px;
+    display: inline-block;
+}
+.votes .button_to
+{
+    display: inline-block;
 }
