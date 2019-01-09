@@ -1,4 +1,7 @@
 class PostsController < ApplicationController
+    respond_to do |format|
+      format.js {render layout: false} # Add this line to you respond_to block
+    end
     def index
         @posts = Post.all
     end
@@ -33,13 +36,12 @@ class PostsController < ApplicationController
     def upvote
       @post = Post.find(params[:id])
       @post.upvote_by current_user
-     render :nothing => true
+     render :template => "posts/votes"
     end
     def downvote
       @post = Post.find(params[:id])
       @post.downvote_by current_user
-      render :nothing => true
-    end
+        render :template => "posts/votes"    end
     
     private
     def post_params

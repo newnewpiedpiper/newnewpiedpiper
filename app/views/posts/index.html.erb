@@ -9,11 +9,7 @@
   <div class="comment-count">
                 <span class="tag is-rounded"><%= post.comments.count %> comments</span>
             </div>
- <div class="votes">
- <%= link_to "Upvote", upvote_post_path(post.id), method: :put,remote: true %>  
- <%= post.score %>
-  <%= link_to "Downvote", downvote_post_path(post.id), method: :put,remote: true %>  
-</div>
+  <%= render 'posts/votes', :@post => post %>
  </div>
 
  <% end %>

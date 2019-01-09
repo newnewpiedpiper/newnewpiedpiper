@@ -35,6 +35,7 @@ end
 users = [
     { :name => "Vinayak Chetlapalli", :email => "vinayakc@tamu.edu", :password => "laptop07", :password_confirmation =>  "laptop07"}, 
     { :name => "Sample Hello", :email => "sample@gmail.com", :password => "password", :password_confirmation => "password"},
+    { :name => "amandapanda", :email => "me@amandaeaster.com", :password => "testpassword", :password_confirmation => "testpassword"},
 ]
 
 users.each do |user|

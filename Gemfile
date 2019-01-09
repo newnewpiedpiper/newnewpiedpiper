@@ -42,6 +42,7 @@ gem 'jquery-rails'
 gem 'haml'
 gem 'turbolinks'
 gem 'acts_as_votable'
+gem 'responders'
 
 # Use unicorn as the web server
 # gem 'unicorn'

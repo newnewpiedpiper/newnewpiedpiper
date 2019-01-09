@@ -8,11 +8,7 @@
 </h3>
 <img class="post_image" src="<%= @post.link %>"></img>
 
-<div class="votes">
- <%= link_to "Upvote", upvote_post_path(@post), method: :put, remote: true %>  
- <%= @post.score %>
-  <%= link_to "Downvote", downvote_post_path(@post), method: :put, remote: true %>  
-</div>
+<%= render 'posts/votes', :@post => @post %>
 
 </div>
 </div>
@@ -24,9 +20,13 @@
         <div class="comment-form">
             <hr />
             <h3 class="subtitle is-3">Leave a reply</h3>
+            <% if logged_in? %>
             <div class="comment_input">
              <%= render 'comments/form' %>
             </div>
+            <% else %>
+            <p>You must be logged in to comment on posts.</p>
+            <% end %>
         </div>
 
 

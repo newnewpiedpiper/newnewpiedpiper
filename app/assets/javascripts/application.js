@@ -24,3 +24,17 @@
 function w3_close() {
   document.getElementById("mySidebar").style.display = "none";
 }
+    function changeColor(event) {
+
+        if (!event) {
+            event = window.event; // Older versions of IE use 
+                                  // a global reference 
+                                  // and not an argument.
+        };
+    
+        var el = (event.target || event.srcElement); // DOM uses 'target';
+                                                     // older versions of 
+                                                     // IE use 'srcElement'
+        el.style.color="red";
+
+    }

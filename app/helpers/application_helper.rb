@@ -27,11 +27,15 @@ module ApplicationHelper
         return @user.name
     end
     def check_permissions(id)
-        if(current_user.id==id)
+        if(current_user.nil?)
+            return false
+        elsif(current_user.id==id)
             return true
         else
             return false
         end
     end
-    
+    def get_votes_class(id)
+        return "votes_#{id}"
+    end
 end
