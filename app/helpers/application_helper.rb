@@ -3,7 +3,7 @@ module ApplicationHelper
     puts "initial"
     session[:user_id] = user.id
     end
-   def log_out
+    def log_out
     session.delete(:user_id)
     @current_user = nil
     end
@@ -17,8 +17,18 @@ module ApplicationHelper
         !current_user.nil?
     end
     def get_username(userid)
+        if(userid.nil?)
+            return ""
+        end
         @user = User.find(userid)
         return @user.name
+    end
+    def check_permissions(id)
+        if(current_user.id==id)
+            return true
+        else
+            return false
+        end
     end
     
 end
