@@ -9,13 +9,20 @@
 <header>
   <button id=sidebar class="menu_toggle" onclick="w3_open()">☰</button>
   <div class="site_title"><%= link_to "Sling", root_path %></div>
-  <!--<% if logged_in? %> -->
-  <!--  <%= link_to "Log Out", logout_path, method: :delete, id:"log_out" %>-->
-  <!--  <%= link_to "Sign Up", new_user_path, id:"sign_up" %>-->
-  <!--  <%= link_to "Log In", login_path, id:"login" %>-->
-  <!--<% else %>-->
+  <% if logged_in? %> 
+   
+ 
 
-  <!--<% end %>-->
+  <% else %>-->
+  
+
+      <a href="#" class="w3-bar-item w3-button">Log In</a><br>
+    <%= link_to "Log In", login_path, id:"login" %>
+    
+    <a href="#" class="w3-bar-item w3-button">Sign Up</a><br>
+  <%= link_to "Sign Up", new_user_path, id:"sign_up" %>
+
+  <% end %>-->
   
   
 </header>
@@ -23,17 +30,28 @@
 <div class="w3-sidebar w3-bar-block w3-border-right" style="display:none" id="mySidebar">
   <a onclick="w3_close()" class="w3-bar-item w3-large">Close &times;</a><br>
   <%= link_to "Home", root_path %><br>
-  <a href="#" class="w3-bar-item w3-button">My Account</a><br>
-  <%= link_to "Create new post", new_post_path, id: "create_post" %><br>
+ 
   
-  <a href="#" class="w3-bar-item w3-button">Sign Up</a><br>
-  <%= link_to "Sign Up", new_user_path, id:"sign_up" %>
+  
   
   <% if logged_in? %>
+  
+   <a href="#" class="w3-bar-item w3-button">My Account</a><br>
+  <%= link_to "Create new post", new_post_path, id: "create_post" %><br>
+   
     <a href="#" class="w3-bar-item w3-button">Users</a><br>
+     <a href="#" class="w3-bar-item w3-button">My Account</a><br>
+  <%= link_to "Create new post", new_post_path, id: "create_post" %><br>
+    
+     <a href="#" class="w3-bar-item w3-button">Log out</a><br>
+    <%= link_to "Log Out", logout_path, method: :delete, id:"log_out" %>
+    
   <% else %>
-    <a href="#" class="w3-bar-item w3-button">Log In</a><br>
-    <%= link_to "Log In", login_path, id:"login" %>
+   
+   
+  
+  
+   
   <% end %>
   
 </div>

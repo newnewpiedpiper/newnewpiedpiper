@@ -7,7 +7,7 @@ class UsersLoginTest < ActionDispatch::IntegrationTest
     assert_template 'sessions/new'
     
     # params: before session
-    post login_path,  { session: { email: "", password: "" } }
+    post login_path, params: { session: { email: "", password: "" } }
     assert_template 'sessions/new'
     assert_not flash.empty?
     get root_path
