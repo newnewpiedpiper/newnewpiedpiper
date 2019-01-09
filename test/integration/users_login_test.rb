@@ -5,6 +5,8 @@ class UsersLoginTest < ActionDispatch::IntegrationTest
   test "login with invalid information" do
     get login_path
     assert_template 'sessions/new'
+    
+    # params: before session
     post login_path, params: { session: { email: "", password: "" } }
     assert_template 'sessions/new'
     assert_not flash.empty?
