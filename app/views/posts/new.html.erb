@@ -1,6 +1,10 @@
 <h1>Create a Post</h1>
 <%= form_for @post do |f| %>
  <p>
+  <%= f.label "Channel" %><br>
+  <%= f.select :channel_id, [['Memes','1'],['Places','2']] %>
+ </p>
+ <p>
   <%= f.label :title %><br>
   <%= f.text_field :title %>
  </p>

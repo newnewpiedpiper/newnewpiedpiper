@@ -45,11 +45,11 @@
   
   
   <% if logged_in? %>
-  <%= gravatar_for current_user %>
-  <%= current_user.username %>
+  <%= gravatar_for current_user %><br>
+  @<%= current_user.username %>
   <br><br>
   
-   <%= link_to "Profile", current_user %>
+   <%= link_to "Profile", current_user %><br>
 
    
       
@@ -59,7 +59,7 @@
     
     
      
-   <%= link_to "Log Out", logout_path, method: :delete, id: "Log Out" %>
+   <%= link_to "Log Out", logout_path, method: :delete, id: "Log Out" %><br>
     
   <% else %>
    
