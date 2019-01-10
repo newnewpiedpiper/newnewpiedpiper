@@ -10,7 +10,7 @@ Then(/^I should see all posts$/) do
   expect(page).to have_xpath("//tr", count: 5)
 end
 
-Then /^(?:|I )should see the post "([^"]*)"$/ do |text|
+Then ("I should see the post {string}") do |string|
   if page.respond_to? :should
     page.should have_content(text)
   else
@@ -34,6 +34,8 @@ end
 Given("the post with id {int} was created less than {int} minutes ago") do |int, c_time|  
   post = Post.find_by(id: int)
   time = Time.new
+  puts("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
+  puts(time-post.created_at)
   expect(time-post.created_at).to be <= c_time
 end
 
