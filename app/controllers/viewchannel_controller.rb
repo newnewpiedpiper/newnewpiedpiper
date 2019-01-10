@@ -1,6 +1,6 @@
 class ViewchannelController < ApplicationController
     def index
-        # remove old entries
+        # remove old entries here
         Viewchannelinfo.delete_all
         Viewchannelpost.delete_all
         
