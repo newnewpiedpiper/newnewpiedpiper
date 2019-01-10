@@ -9,6 +9,8 @@
 <% end %>
 </span>
 <br>
+<a href="<%= user_path(get_username(@post.user_id))%>">@<%= get_username(@post.user_id)%></a>
+<br>
 <h1><%= @post.title %></h1>
 <h3>
 <%= @post.content %>

@@ -10,9 +10,9 @@
   <button id=sidebar class="menu_toggle" onclick="w3_open()", id = "Side Bar">☰</button>
 
   <div class="site_title"><%= link_to "Sling", root_path, id: "Sling" %></div>
-
+  <div class="menu_right_align">
   <%= form_tag(search_page_path, :method => "get",   
-    class: 'navbar-form navbar-right') do %>  
+    class: 'search_form') do %>  
     <div class="input-group">  
       <%= search_field_tag :search, params[:search], placeholder: "Search", class: "form-control" %>  
       <div class="input-group-btn">  
@@ -33,7 +33,7 @@
     <%= link_to "Sign Up", new_user_path, id:"Sign Up" %>
     </div>
   <% end %>
-  
+  </div>
   
 </header>
 <body>

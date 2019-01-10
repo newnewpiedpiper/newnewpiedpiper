@@ -94,8 +94,21 @@ w3-border-right {
     font-size: 14px;
     display: inline-block;
     text-align: right;
-    float: right;
+    /*float: right;*/
 }
 .login_links a{
     color: white;
+}
+.search_form
+{
+    display: inline-block;
+    width:20%;
+}
+.menu_right_align
+{
+    display: inline-block;
+    text-align: right;
+    float: right;
+    width: 80%;
+    padding-right: 20px;
 }

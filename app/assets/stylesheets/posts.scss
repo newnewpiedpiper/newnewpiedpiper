@@ -23,7 +23,7 @@
 }
 .post_image{
     display: block;
-    max-width:90%;
+    width:100%;
 }
 .main_post_content{
     width:75%;
@@ -65,7 +65,6 @@ box-shadow: 0px 0px 40px -5px rgba(0,0,0,0.3);
     background-color: white;
     margin-bottom:20px;
     border-radius: 6px;
-    height: 100%;
 }
 .votes{
     float: right;
