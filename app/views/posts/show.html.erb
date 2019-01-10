@@ -1,16 +1,24 @@
 <div class="post_page">
 <div class="main_post_content">
 <div class="main_post_item">
-<%= link_to "Back", root_path %><br>
+<%= link_to "Back", root_path %>
+<span class="edit">
+<% if !current_user.nil? && check_permissions(current_user.id) %>
+<%= link_to 'Edit', edit_post_path(@post) %>
+<% else %>
+<% end %>
+</span>
+<br>
 <h1><%= @post.title %></h1>
 <h3>
 <%= @post.content %>
 </h3>
-<img class="post_image" src="<%= @post.link %>"></img>
+<center><img class="post_image" src="<%= @post.link %>"></img></center>
 
 <%= render 'posts/votes', :@post => @post %>
 
 </div>
+
 </div>
 <div class="comments">
 <center><h3><%= @post.comments.count %> Comments</h3></center>
@@ -31,5 +39,4 @@
 
 
 </div>
-<%= link_to 'Edit', edit_post_path(@post) %>
 </div>

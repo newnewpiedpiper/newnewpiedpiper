@@ -24,7 +24,9 @@ module ApplicationHelper
             return ""
         end
         @user = User.find(userid)
-        return @user.name
+        return @user.username
+        rescue ActiveRecord::RecordNotFound
+            return ""
     end
     def check_permissions(id)
         if(current_user.nil?)

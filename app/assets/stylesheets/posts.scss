@@ -22,7 +22,8 @@
     column-width: auto;
 }
 .post_image{
-    width: 100%;
+    display: block;
+    max-width:90%;
 }
 .main_post_content{
     width:75%;
@@ -55,6 +56,7 @@ box-shadow: 0px 0px 40px -5px rgba(0,0,0,0.3);
 }
 .post_page{
     display:flex;
+    max-height:90vh;
 }
 .main_post_item{
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
@@ -63,6 +65,7 @@ box-shadow: 0px 0px 40px -5px rgba(0,0,0,0.3);
     background-color: white;
     margin-bottom:20px;
     border-radius: 6px;
+    height: 100%;
 }
 .votes{
     float: right;
@@ -71,6 +74,7 @@ box-shadow: 0px 0px 40px -5px rgba(0,0,0,0.3);
 }
 .photo_post_tile{
     display: block;
+    max-width:500px;
 }
 .comment_input{
    max-height: 50px;
@@ -94,4 +98,8 @@ input#upvote{
 .votes .button_to
 {
     display: inline-block;
+}
+.edit{
+    text-align: right;
+    float: right;
 }

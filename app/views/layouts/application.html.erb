@@ -18,12 +18,11 @@
 
   <% else %>
   
-
+    <div class="login_links">
     <%= link_to "Log In", login_path, id:"Log In" %>
-    
-
-  <%= link_to "Sign Up", new_user_path, id:"Sign Up" %>
-
+    <br>
+    <%= link_to "Sign Up", new_user_path, id:"Sign Up" %>
+    </div>
   <% end %>
   
   
@@ -48,7 +47,6 @@
   <%= link_to "Create new post", new_post_path, id: "create_post" %><br>
    
    
-    <a href="#" class="w3-bar-item w3-button">User</a><br>
     
     
      
@@ -71,7 +69,7 @@
     </div>
     
 <%= yield %>
-<%= debug(params) if Rails.env.development? %>
+
 
 </body>
 </html>

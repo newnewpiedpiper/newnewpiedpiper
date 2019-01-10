@@ -90,3 +90,12 @@ w3-border-right {
     background-color: rgba(255, 0, 0, 0.4);
     margin: 15px;
 }
+.login_links{
+    font-size: 14px;
+    display: inline-block;
+    text-align: right;
+    float: right;
+}
+.login_links a{
+    color: white;
+}
