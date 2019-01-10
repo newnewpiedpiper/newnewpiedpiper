@@ -40,4 +40,10 @@ module ApplicationHelper
     def get_votes_class(id)
         return "votes_#{id}"
     end
+    def get_channel_name(id)
+        @channel = Channel.find(id)
+        return @channel.channel_name
+        rescue ActiveRecord::RecordNotFound
+            return ""
+    end
 end

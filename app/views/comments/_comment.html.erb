@@ -2,9 +2,9 @@
   <article class="media">
     <div class="media-content">
       <div class="content">
+        <a href="<%= user_path(get_username(comment.user_id))%>">@<%= get_username(comment.user_id)%></a>
         <p>
           <%= comment.body %><br>
-          @<%= get_username(comment.user_id) %>
         </p>
       </div>
     </div>
