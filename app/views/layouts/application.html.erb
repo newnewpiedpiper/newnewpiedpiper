@@ -47,7 +47,7 @@
   
   <% if logged_in? %>
   <%= gravatar_for current_user %>
-  <%= current_user.name %>
+  <%= current_user.username %>
   <br><br>
   
    <%= link_to "Profile", current_user %>
