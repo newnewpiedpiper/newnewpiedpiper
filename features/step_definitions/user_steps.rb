@@ -6,7 +6,7 @@ Then("I should see user profile page for {string}") do |string|
     visit "/users/#{string}"
 end 
 
-Then("I should see a success flash") 
+Then("I should see a success flash") do
     expect(flash[:success]).to be_present
 end
 
