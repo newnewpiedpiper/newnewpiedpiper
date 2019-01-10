@@ -11,7 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190109071419) do
+ActiveRecord::Schema.define(version: 20190110015645) do
+
+  create_table "channels", force: :cascade do |t|
+    t.text     "channel_name"
+    t.text     "channel_description"
+    t.text     "channel_guidelines"
+    t.integer  "moderators"
+    t.text     "postid"
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+  end
 
   create_table "comments", force: :cascade do |t|
     t.text     "body"
@@ -45,6 +55,23 @@ ActiveRecord::Schema.define(version: 20190109071419) do
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
+
+  create_table "viewchannelinfos", force: :cascade do |t|
+    t.text     "channel_name"
+    t.text     "channel_description"
+    t.text     "channel_guidelines"
+    t.integer  "moderators"
+    t.text     "channel_post_id"
+    t.integer  "postid"
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+  end
+
+  create_table "viewchannelposts", force: :cascade do |t|
+    t.integer  "postid"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "votes", force: :cascade do |t|
     t.integer  "votable_id"

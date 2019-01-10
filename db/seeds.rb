@@ -44,3 +44,11 @@ users = [
 users.each do |user|
     User.create!(user)
 end 
+
+channels = [{:channel_name => "dogs", :channel_description => "All dogs all the time", :channel_guidelines => "Don\'t post cats!", :moderators => 1, :postid => "1,2"},
+            {:channel_name => "cats", :channel_description => "A channel for cats", :channel_guidelines => "Don\'t post dogs!", :moderators => 2, :postid => "3,4"}
+           ]
+
+channels.each do |channel|
+  Channel.create!(channel)
+end
