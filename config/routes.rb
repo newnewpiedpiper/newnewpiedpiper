@@ -15,6 +15,8 @@ Rails.application.routes.draw do
   post   '/login',   to: 'sessions#create'
   delete '/logout',  to: 'sessions#destroy'
   
+  get '/search', to: 'search#search', :as => 'search_page'
+  
   resources :users, param: :username
 
   resources :posts do
