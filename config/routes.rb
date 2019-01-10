@@ -30,6 +30,12 @@ Rails.application.routes.draw do
     end
   end
   
+  
+  # --------Uncomment this (and comment out the root to view Cats channel)
+  # root 'viewchannel#index'
+  
+  
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
