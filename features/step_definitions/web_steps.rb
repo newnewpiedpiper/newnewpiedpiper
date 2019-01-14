@@ -252,3 +252,12 @@ end
 Then /^show me the page$/ do
   save_and_open_page
 end
+
+Given("I upvote") do
+ page.all('.voter')[1].click
+end
+
+Given("I downvote") do
+ page.all('.voter')[2].click
+end
+

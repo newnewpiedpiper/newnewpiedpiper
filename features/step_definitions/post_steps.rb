@@ -5,6 +5,13 @@ Given(/^the following posts exist:$/) do |table|
   end
 end
 
+Given(/^the following users exist:$/) do |table|
+  # table is a Cucumber::MultilineArgument::DataTable
+  table.hashes.each do |user|
+      User.create!(user)
+  end
+end
+
 Then(/^I should see all posts$/) do
   # Make sure that all the posts in the app are visible in the table
   expect(page).to have_xpath("//tr", count: 5)
@@ -39,6 +46,6 @@ Given("the post with id {int} was created less than {int} minutes ago") do |int,
   expect(time-post.created_at).to be <= c_time
 end
 
-When("I follow {string} from the sidebar") do |string|
-  page.find('#create_post', visible: :all).click
+When("I follow {string} with id {string} from the sidebar") do |string1, id|
+  page.find(id, visible: :all).click
 end

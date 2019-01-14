@@ -13,3 +13,7 @@ end
 Then("I should see a {string} error") do |string|
     expect(page).to have_content("#{string}")
 end 
+When("I follow {string} from the sidebar") do |link|
+  page.execute_script("$('.all-hidden-elements').show();");
+  click_link(link)
+end
