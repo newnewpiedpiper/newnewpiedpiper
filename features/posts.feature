@@ -52,3 +52,27 @@ Scenario: edit a post
   And I fill in "Title" with "Brown Doggo"
   And I press "Update Post"
   Then I should see "Brown Doggo"
+
+Scenario: comment on a post
+  Given I am viewing post with id 1
+  When I fill in "comment_input" with "Cool post!"
+  And I press "Create Comment"
+  Then I should see "Cool post!"
+  
+Scenario: delete a comment of a post
+  Given I am viewing post with id 1
+  When I fill in "comment_input" with "Cool post!"
+  And I press "Create Comment"
+  Then I should see "Cool post!"
+  When I follow "Delete"
+  Then I should not see "Cool post!"
+  
+Scenario: view creator of a post
+  Given I am viewing post with id 1
+  Then I should see "vin_diesel"
+  When I follow "vin_diesel"
+  Then I should see "Username"
+
+Scenario: view upvotes
+  Given I am viewing post with id 1
+  Then I should see "▲ 0 ▼"
