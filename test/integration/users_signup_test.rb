@@ -8,7 +8,6 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
       post users_path,  { user: { name:  "",
                                          email: "user@invalid",
                                          password:              "foo",
-                                         username: "invalid",
                                          password_confirmation: "bar" } }
     end
     assert_template 'users/new'
@@ -22,7 +21,6 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
     assert_difference 'User.count', 1 do
       post users_path,  { user: { name:  "Example User",
                                          email: "user@example.com",
-                                         username: "valid",
                                          password:              "password",
                                          password_confirmation: "password" } }
     end
