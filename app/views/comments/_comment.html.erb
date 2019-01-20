@@ -13,4 +13,5 @@
                   method: :delete, class: "button is-danger", data: { confirm: 'Are you sure?' } %>
     <% end %>
   </article>
+  <%= render 'comments/votes', :@comment => comment %>
 </div>

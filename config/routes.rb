@@ -29,7 +29,12 @@ Rails.application.routes.draw do
       put "downvote", to: "posts#downvote"
     end
   end
-  
+  resources :comments do
+    member do
+      put "upvote", to: "comments#upvote"
+      put "downvote", to: "comments#downvote"
+    end
+  end
   
   # --------Uncomment this (and comment out the root to view Cats channel)
   # root 'viewchannel#index'

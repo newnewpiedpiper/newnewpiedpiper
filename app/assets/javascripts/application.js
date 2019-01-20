@@ -18,6 +18,7 @@
 //= require turbolinks
 //= require_tree .
 //=jquery
+
  function w3_open() {
   document.getElementById("mySidebar").style.display = "block";
 }
