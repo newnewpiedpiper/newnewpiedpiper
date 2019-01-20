@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190110015645) do
+ActiveRecord::Schema.define(version: 20190120015441) do
 
   create_table "channels", force: :cascade do |t|
     t.text     "channel_name"
@@ -40,10 +40,19 @@ ActiveRecord::Schema.define(version: 20190110015645) do
     t.integer  "votes"
     t.integer  "user_id"
     t.integer  "channel_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
     t.string   "link"
+    t.integer  "cached_votes_total", default: 0
+    t.integer  "cached_votes_score", default: 0
+    t.integer  "cached_votes_up",    default: 0
+    t.integer  "cached_votes_down",  default: 0
   end
+
+  add_index "posts", ["cached_votes_down"], name: "index_posts_on_cached_votes_down"
+  add_index "posts", ["cached_votes_score"], name: "index_posts_on_cached_votes_score"
+  add_index "posts", ["cached_votes_total"], name: "index_posts_on_cached_votes_total"
+  add_index "posts", ["cached_votes_up"], name: "index_posts_on_cached_votes_up"
 
   create_table "users", force: :cascade do |t|
     t.string   "name"
