@@ -23,16 +23,22 @@
 
 </div>
 <div class="comments">
-<center><h3><%= @post.comments.count %> Comments</h3></center>
+<center><h3> <%= @post.comments.count %> Comments</center>
 
-    
-        <%= render @post.comments %>
+        
+
+          <%= render(partial: 'comments/comment', collection: @post.comments) %>
+
         <div class="comment-form">
             <hr />
             <h3 class="subtitle is-3">Leave a reply</h3>
             <% if logged_in? %>
             <div class="comment_input">
-             <%= render 'comments/form' %>
+              <%= form_for [@post, Comment.new] do |f| %>
+                <%= f.text_area :body, placeholder: "Add a comment" %><br/>
+                <%= f.hidden_field :user_id, :value => current_user.id %>
+                <%= f.submit "Add Comment" %>
+                <% end %>
             </div>
             <% else %>
             <p>You must be logged in to comment on posts.</p>

@@ -39,3 +39,19 @@ function w3_close() {
         el.style.color="red";
 
     }
+    function showReply(id)
+    {
+        var comment=document.getElementById("comment_reply_"+id);
+        var reply=document.getElementById("reply_prompt_"+id);
+        if(comment.style.display == "block")
+        {
+            reply.innerHTML = "Reply";
+            comment.style.display = "none";
+        }
+        else{
+            comment.style.display = "block";
+        
+        reply.innerHTML = "X";
+        }
+        
+    }

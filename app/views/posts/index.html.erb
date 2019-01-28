@@ -1,6 +1,6 @@
 
 <div class="masonry">
- <% Post.order(:cached_votes_score).reverse.each do |post| %>
+ <% @posts.each do |post| %>
  <div class="post_item masonry-brick <%= class_finder(post.id) %>">
   <div class=”masonry-layout-panel-content”>
   <a href="<%= user_path(get_username(post.user_id))%>">@<%= get_username(post.user_id)%></a><br>

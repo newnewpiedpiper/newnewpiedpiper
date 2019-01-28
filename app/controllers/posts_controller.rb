@@ -4,7 +4,8 @@ class PostsController < ApplicationController
     end
     def index
         @posts = Post.all
-        @posts = Post.order('created_at DESC')
+        # @posts = Post.order('created_at DESC')
+        @posts=Post.order('cast(created_at as date) desc, cached_votes_up desc')
     end
     def new
         @post = Post.new
@@ -33,6 +34,8 @@ class PostsController < ApplicationController
     end
     def show
         @post = Post.find(params[:id])
+        # @comments = @commentable.comments
+        @comment = Comment.new
     end
     def upvote
       @post = Post.find(params[:id])

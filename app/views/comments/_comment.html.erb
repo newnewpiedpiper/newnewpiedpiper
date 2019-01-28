@@ -1,17 +1,25 @@
-<div class="comment">
-  <article class="media">
-    <div class="media-content">
-      <div class="content">
-        <a href="<%= user_path(get_username(comment.user_id))%>">@<%= get_username(comment.user_id)%></a>
-        <p>
-          <%= comment.body %><br>
-        </p>
-      </div>
-    </div>
-    <% if check_permissions(comment.user_id) %>
-     <%= link_to 'Delete', [comment.post, comment],
-                  method: :delete, class: "button is-danger", data: { confirm: 'Are you sure?' } %>
+<div class="comment" id="comment-<%= comment.id %>">
+  <a href="<%= user_path(get_username(comment.user_id))%>">@<%= get_username(comment.user_id)%></a><br>
+  <%= comment.body %><br>
+  <small><%= time_ago_in_words(comment.created_at) %> ago</small><br>
+  <span class="reply_prompt" id="reply_prompt_<%= comment.id %>" onclick="showReply(<%= comment.id %>)">Reply</span>
+  <div class="reply" id="comment_reply_<%= comment.id %>">
+  <%= form_for [comment, Comment.new] do |f| %>
+      <%= f.text_area :body, placeholder: "Add a Reply" %><br/>
+      <%= f.hidden_field :user_id, :value => current_user.id %>
+      <%= f.submit "Reply"  %>
+      <% end %>
+  </div>
+  <% if check_permissions(comment.user_id) %>
+     <%= link_to 'Delete', 
+                             post_comment_path(@post, comment), 
+                             method: :delete,
+                             data: { confirm: 'Are you sure you want to delete this comment?' } %>   
     <% end %>
-  </article>
+  </post>
   <%= render 'comments/votes', :@comment => comment %>
 </div>
+  <ul>
+      <%= render partial: 'comments/comment', collection: comment.comments %>
+  </ul>
+
