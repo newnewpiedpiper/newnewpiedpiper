@@ -27,7 +27,7 @@
 
         
 
-          <%= render(partial: 'comments/comment', collection: @post.comments) %>
+          <%= render(partial: 'comments/comment', collection: @post.comments.order('cast(created_at as date) desc, cached_votes_up desc')) %>
 
         <div class="comment-form">
             <hr />

@@ -20,6 +20,6 @@
   <%= render 'comments/votes', :@comment => comment %>
 </div>
   <ul>
-      <%= render partial: 'comments/comment', collection: comment.comments %>
+      <%= render partial: 'comments/comment', collection: comment.comments.order('cast(created_at as date) desc, cached_votes_up desc') %>
   </ul>
 

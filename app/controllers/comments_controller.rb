@@ -14,7 +14,7 @@ before_action :find_commentable
       if @comment.save
         redirect_to :back, notice: 'Your comment was successfully posted!'
       else
-        redirect_to :back, notice: "Your comment wasn't posted!"
+        redirect_to :back, notice: "Your comment couldn't be posted!"
       end
     end
     def destroy
