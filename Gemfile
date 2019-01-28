@@ -50,3 +50,6 @@ gem 'responders'
 
 # Deploy with Capistrano
 # gem 'capistrano'
+
+gem 'sunspot_rails'
+gem 'sunspot_solr'

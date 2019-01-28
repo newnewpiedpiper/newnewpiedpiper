@@ -5,6 +5,7 @@
         1,
         null,
         1,
+
         1,
         1,
         1,
@@ -169,7 +170,7 @@
         9,
         null,
         null,
-        0,
+        28,
         null,
         null
       ],
@@ -227,6 +228,9 @@
         1,
         1,
         1,
+        null
+      ],
+      "/home/ubuntu/Ruby/newnewpiedpiper/app/models/comment.rb": [
         1,
         1,
         1,
@@ -298,7 +302,7 @@
         1,
         1,
         1,
-        1,
+        7,
         null,
         1,
         null,
