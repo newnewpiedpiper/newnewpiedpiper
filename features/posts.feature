@@ -56,13 +56,13 @@ Scenario: edit a post
 Scenario: comment on a post
   Given I am viewing post with id 1
   When I fill in "comment_input" with "Cool post!"
-  And I press "Create Comment"
+  And I press "Add Comment"
   Then I should see "Cool post!"
   
 Scenario: delete a comment of a post
   Given I am viewing post with id 1
   When I fill in "comment_input" with "Cool post!"
-  And I press "Create Comment"
+  And I press "Add Comment"
   Then I should see "Cool post!"
   When I follow "Delete"
   Then I should not see "Cool post!"
