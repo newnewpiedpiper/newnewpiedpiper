@@ -1,4 +1,6 @@
 <h1>Create a Post</h1>
+<center>
+ <div class="new_post_form">
 <%= form_for @post do |f| %>
  <p>
   <%= f.label "Channel" %><br>
@@ -12,12 +14,23 @@
   <%= f.label :content %><br>
   <%= f.text_area :content %>
  </p>
- <p>
+ <p>Media Type</p>
+ <select id="media_type" onchange=showMediaInput()>
+ <option value="photo">Photo/GIF</option>
+ <option value="video">Video Link</option>
+ </select>
+ <p id="photo_gif">
   <%= f.label "Media" %><br>
   <%= f.attachment_field :media_content %>
+ </p>
+ <p id="video_link" style="display: none;">
+  <%= f.label "Video Link" %><br>
+  <%= f.text_field :link %>
  </p>
   <%= f.hidden_field :user_id, :value => current_user.id %>
  <p>
   <%= f.submit %>
  </p>
 <% end %>
+</div>
+</center>

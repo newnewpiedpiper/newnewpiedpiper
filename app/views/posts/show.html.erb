@@ -3,7 +3,7 @@
 <div class="main_post_item">
 <%= link_to "Back", root_path %>
 <span class="edit">
-<% if !current_user.nil? && check_permissions(current_user.id) %>
+<% if !current_user.nil? && check_time_permissions(current_user.id, @post.id) %>
 <%= link_to 'Edit', edit_post_path(@post) %>
 <% else %>
 <% end %>
@@ -15,8 +15,11 @@
 <h3>
 <%= @post.content %>
 </h3>
+<% if(@post.link.nil?) %>
 <center><%= image_tag attachment_url(@post, :media_content, format: "jpg"), :class => "post_image" %></center>
-
+<% else %>
+<center><iframe width="700px" height="400px" src="<%= @post.link %>" frameborder="0" allowfullscreen></iframe></center>
+<% end %>
 <%= render 'posts/votes', :@post => @post %>
 
 </div>

@@ -84,3 +84,17 @@ function resizeInstance(instance){
    var item = instance.elements[0];
    resizeGridItem(item);
 }
+function showMediaInput()
+{
+    var select_value=document.getElementById("media_type").value 
+    if(select_value=="photo")
+    {
+        document.getElementById("photo_gif").style.display="block";
+        document.getElementById("video_link").style.display="none";
+    }
+    else
+    {
+        document.getElementById("photo_gif").style.display="none";
+        document.getElementById("video_link").style.display="block";
+    }
+}

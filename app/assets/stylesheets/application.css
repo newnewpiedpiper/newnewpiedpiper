@@ -143,3 +143,20 @@ w3-border-right {
     max-height:600px;
     padding-bottom: 15px;
 }
+.new_post{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    padding: 20px;
+    background-color: white;
+    margin-bottom:20px;
+    border-radius: 6px;
+    margin:10px;
+}
+.new_post_form{
+    width:80%;
+    display: inline-block; 
+    text-align: left;
+}
+.post_content{
+    max-width: 500px;
+}

@@ -28,11 +28,32 @@ module ApplicationHelper
         rescue ActiveRecord::RecordNotFound
             return ""
     end
+    
     def check_permissions(id)
         if(current_user.nil?)
             return false
         elsif(current_user.id==id)
             return true
+        else
+            return false
+        end
+    end
+    
+    def check_time_permissions(id, post_id)
+        if(current_user.nil?)
+            return false
+        elsif(current_user.id==id)
+            
+            current = DateTime.now
+            created= Post.find(post_id).created_at
+            a= created-current;
+            difference=(a * 24 * 60).to_i   # 3600 minutes
+            if(difference<1)
+                puts difference
+                return true
+            else
+                return false
+            end
         else
             return false
         end

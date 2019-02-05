@@ -6,8 +6,12 @@
   #<%= get_channel_name(post.channel_id) %>
  <a href=<%= post_path(post) %>>
   <h2><%= post.title %></h2> </a>
-  <h3><%= post.content %></h3>
-  <center><%= image_tag attachment_url(@post, :media_content, format: "jpg"), :class => "post_image" %></center>
+  <h3 class="post_content"><%= post.content %></h3>
+  <% if(@post.link== "" || @post.link.nil?) %>
+ <center><%= image_tag attachment_url(@post, :media_content, format: "jpg"), :class => "post_image" %></center>
+ <% else %>
+ <center><iframe width="700px" height="400px" src="<%= @post.link %>" frameborder="0" allowfullscreen></iframe></center>
+<% end %>
   <div class="comment-count">
                 <span class="tag is-rounded"><%= post.comments.count %> comments</span>
             </div>
