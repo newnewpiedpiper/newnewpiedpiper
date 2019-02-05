@@ -5,7 +5,8 @@ gem 'rails', '4.2.10'
 gem 'bcrypt',         '3.1.12'
 gem 'bootstrap-sass'
 gem 'bootstrap'
-gem 'responders' 
+gem 'responders'
+
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
@@ -25,6 +26,8 @@ group :test do
   gem 'cucumber-rails', :require => false
   gem 'cucumber-rails-training-wheels'
   gem 'simplecov', :require => false
+  gem 'selenium-webdriver'
+  gem 'chromedriver-helper'
 end
 group :production do
   gem 'pg', '~> 0.15'
@@ -53,3 +56,5 @@ gem 'responders'
 
 gem 'sunspot_rails'
 gem 'sunspot_solr'
+gem "refile", require: "refile/rails"
+gem "refile-mini_magick"

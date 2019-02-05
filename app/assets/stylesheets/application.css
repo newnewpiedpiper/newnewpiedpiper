@@ -12,6 +12,7 @@
  *
  *= require_tree .
  *= require_self
+ 
  */
 @import url("//fonts.googleapis.com/css?family=Raleway");
 html,body {
@@ -136,4 +137,9 @@ w3-border-right {
     padding-bottom: 20px;
     padding-top: 20px;
     height:100px;
+}
+.post_item .post_image{
+    max-width: 600px;
+    max-height:600px;
+    padding-bottom: 15px;
 }

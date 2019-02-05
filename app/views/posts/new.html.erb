@@ -13,8 +13,8 @@
   <%= f.text_area :content %>
  </p>
  <p>
-  <%= f.label "Link to content" %><br>
-  <%= f.text_field :link %>
+  <%= f.label "Media" %><br>
+  <%= f.attachment_field :media_content %>
  </p>
   <%= f.hidden_field :user_id, :value => current_user.id %>
  <p>

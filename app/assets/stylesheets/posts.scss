@@ -20,8 +20,9 @@
 .masonry { 
   display: flex;
   flex-flow: row wrap;
-  margin-left: -8px; /* Adjustment for the gutter */
   width: 100%;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
 .masonry-brick {
@@ -116,16 +117,4 @@ input#upvote{
 }
 .popular{
    grid-column: 1 / 3;
-}
-.masonry-brick:nth-child(4n+1) {
-  width: 250px;
-}
-.masonry-brick:nth-child(4n+1):nth-child(4n+2) {
-  width: 325px;
-}
-.masonry-brick:nth-child(4n+1):nth-child(4n+3) {
-  width: 180px;
-}
-.masonry-brick:nth-child(4n+1):nth-child(4n+4) {
-  width: 380px;
 }

@@ -15,7 +15,7 @@
 <h3>
 <%= @post.content %>
 </h3>
-<center><img class="post_image" src="<%= @post.link %>"></img></center>
+<center><%= image_tag attachment_url(@post, :media_content, format: "jpg"), :class => "post_image" %></center>
 
 <%= render 'posts/votes', :@post => @post %>
 

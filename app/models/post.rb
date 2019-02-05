@@ -1,5 +1,5 @@
 class Post < ActiveRecord::Base
-  
+  attachment :media_content
   searchable do 
     text :title, :content
   end 

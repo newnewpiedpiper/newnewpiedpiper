@@ -2,18 +2,16 @@
 <div class="masonry">
  <% @posts.each do |post| %>
  <div class="post_item masonry-brick <%= class_finder(post.id) %>">
-  <div class=”masonry-layout-panel-content”>
   <a href="<%= user_path(get_username(post.user_id))%>">@<%= get_username(post.user_id)%></a><br>
   #<%= get_channel_name(post.channel_id) %>
  <a href=<%= post_path(post) %>>
   <h2><%= post.title %></h2> </a>
   <h3><%= post.content %></h3>
-  <img class="photo_post_tile" src="<%= post.link %>"></img>
+  <center><%= image_tag attachment_url(@post, :media_content, format: "jpg"), :class => "post_image" %></center>
   <div class="comment-count">
                 <span class="tag is-rounded"><%= post.comments.count %> comments</span>
             </div>
   <%= render 'posts/votes', :@post => post %>
-  </div>
  </div>
 
  <% end %>

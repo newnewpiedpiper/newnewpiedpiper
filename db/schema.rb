@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190128033100) do
+ActiveRecord::Schema.define(version: 20190204220332) do
 
   create_table "channels", force: :cascade do |t|
     t.text     "channel_name"
@@ -51,13 +51,17 @@ ActiveRecord::Schema.define(version: 20190128033100) do
     t.integer  "votes"
     t.integer  "user_id"
     t.integer  "channel_id"
-    t.datetime "created_at",                     null: false
-    t.datetime "updated_at",                     null: false
+    t.datetime "created_at",                         null: false
+    t.datetime "updated_at",                         null: false
     t.string   "link"
-    t.integer  "cached_votes_total", default: 0
-    t.integer  "cached_votes_score", default: 0
-    t.integer  "cached_votes_up",    default: 0
-    t.integer  "cached_votes_down",  default: 0
+    t.integer  "cached_votes_total",     default: 0
+    t.integer  "cached_votes_score",     default: 0
+    t.integer  "cached_votes_up",        default: 0
+    t.integer  "cached_votes_down",      default: 0
+    t.string   "media_content_id"
+    t.string   "media_content_filename"
+    t.string   "media_content_size"
+    t.string   "media_content_type"
   end
 
   add_index "posts", ["cached_votes_down"], name: "index_posts_on_cached_votes_down"
