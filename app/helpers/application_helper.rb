@@ -44,11 +44,17 @@ module ApplicationHelper
             return false
         elsif(current_user.id==id)
             
-            current = DateTime.now
+            current = Time.now.utc
             created= Post.find(post_id).created_at
-            a= created-current;
-            difference=(a * 24 * 60).to_i   # 3600 minutes
-            if(difference<1)
+            puts "Current"
+            puts current
+            puts "Created"
+            puts created
+            a= current-created
+            difference=a / 60
+            puts "Difference"
+            puts difference
+            if(difference<5)
                 puts difference
                 return true
             else
