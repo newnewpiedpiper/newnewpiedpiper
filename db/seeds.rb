@@ -36,16 +36,19 @@ end
 
 users = [
 
-    { :name => "Vinayak Chetlapalli", :email => "vinayakc@tamu.edu", :username => "vin_diesel", :password => "laptop07", :password_confirmation =>  "laptop07"}, 
-    { :name => "Annie Blakeslee", :email => "annieblakeslee@tamu.edu", :username => "any", :password => "testpassword", :password_confirmation => "testpassword"},
-    { :name => "Amanda Easter", :email => "me@amandaeaster.com", :username => "amandapanda", :password => "testpassword", :password_confirmation => "testpassword"},
-    { :name => "Reed Hampton", :email => "reedbhampton@gmail.com", :username => "iliketoreed", :password => "testpassword", :password_confirmation => "testpassword"},
-    { :name => "Omar Santos", :email => "omars98@tamu.edu", :username => "god_is_an_omar", :password => "testpassword", :password_confirmation => "testpassword"},
+    { :name => "Vinayak Chetlapalli", :email => "vinayakc@tamu.edu", :username => "vin_diesel", :password => "laptop07", :password_confirmation =>  "laptop07",admin:false}, 
+    { :name => "Annie Blakeslee", :email => "annieblakeslee@tamu.edu", :username => "any", :password => "testpassword", :password_confirmation => "testpassword",admin:false},
+    { :name => "Amanda Easter", :email => "me@amandaeaster.com", :username => "amandapanda", :password => "testpassword", :password_confirmation => "testpassword",admin:false},
+    { :name => "Reed Hampton", :email => "reedbhampton@gmail.com", :username => "iliketoreed", :password => "testpassword", :password_confirmation => "testpassword",admin:false},
+    { :name => "Omar Santos", :email => "omar98@tamu.edu", :username => "god_is_an_omar", :password => "testpassword", :password_confirmation => "testpassword",admin: true},
 ]
 
 users.each do |user|
     User.create!(user)
 end 
+
+
+
 
 channels = [{:channel_name => "memes", :channel_description => "All dogs all the time", :channel_guidelines => "Don\'t post cats!", :moderators => 1, :postid => "1,2"},
             {:channel_name => "places", :channel_description => "A channel for cats", :channel_guidelines => "Don\'t post dogs!", :moderators => 2, :postid => "3,4"}

@@ -31,6 +31,7 @@
     <%= link_to "Log In", login_path, id:"Log In" %>
     <br>
     <%= link_to "Sign Up", new_user_path, id:"Sign Up" %>
+ 
     </div>
   <% end %>
   </div>
@@ -54,6 +55,9 @@
    
       
   <%= link_to "Create new post", new_post_path, id: "create_post" %><br>
+  
+   <li><%= link_to "Settings", edit_user_path(current_user) %></li>
+      <li><%= link_to "Users", users_path %></li>
    
    
     
