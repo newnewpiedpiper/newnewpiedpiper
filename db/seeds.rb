@@ -36,11 +36,11 @@ end
 
 users = [
 
-    { :name => "Vinayak Chetlapalli", :email => "vinayakc@tamu.edu", :username => "vin_diesel1", :password => "laptop07", :password_confirmation =>  "laptop07",admin:false}, 
-    { :name => "Annie Blakeslee", :email => "annieblakeslee@tamu.edu", :username => "any1", :password => "testpassword", :password_confirmation => "testpassword",admin:false},
-    { :name => "Amanda Easter", :email => "me@amandaeaster.com", :username => "amandapanda1", :password => "testpassword", :password_confirmation => "testpassword",admin:false},
-    { :name => "Reed Hampton", :email => "reedbhampton@gmail.com", :username => "iliketoreed1", :password => "testpassword", :password_confirmation => "testpassword",admin:false},
-    { :name => "Omar Santos", :email => "omar@tamu.edu", :username => "god_is_an_omar1", :password => "testpassword", :password_confirmation => "testpassword",admin: true},
+    { :name => "Vinayak Chetlapalli", :email => "vinayakc@tamu.edu", :username => "vin_diesel", :password => "laptop07", :password_confirmation =>  "laptop07",admin:false}, 
+    { :name => "Annie Blakeslee", :email => "annieblakeslee@tamu.edu", :username => "any", :password => "testpassword", :password_confirmation => "testpassword",admin:false},
+    { :name => "Amanda Easter", :email => "me@amandaeaster.com", :username => "amandapanda", :password => "testpassword", :password_confirmation => "testpassword",admin:false},
+    { :name => "Reed Hampton", :email => "reedbhampton@gmail.com", :username => "iliketoreed", :password => "testpassword", :password_confirmation => "testpassword",admin:false},
+    { :name => "Omar Santos", :email => "omar98@tamu.edu", :username => "god_is_an_omar", :password => "testpassword", :password_confirmation => "testpassword",admin: true},
 ]
 
 users.each do |user|
