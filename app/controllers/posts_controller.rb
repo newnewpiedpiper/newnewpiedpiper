@@ -4,6 +4,7 @@ class PostsController < ApplicationController
     end
     def index
         @posts = Post.all
+        @posts = current_user.favorite_posts
         # @posts = Post.order('created_at DESC')
         @posts=Post.order('cast(created_at as date) desc, cached_votes_up desc')
     end
@@ -19,6 +20,13 @@ class PostsController < ApplicationController
        render 'new'
       end
     end
+    
+    #def bookmark
+    #    @post = Post.find(params[:id])
+    #    @post = Post.bookmark_by current_user
+    #    flash[:notice] = "Added to bookmarks!"
+    #end
+    
     def edit
       @post = Post.find(params[:id])
     end

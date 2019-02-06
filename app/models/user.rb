@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
+  has_many :favorites
+  has_many :favorite_posts, through: :favorites, source: :favorited, source_type: 'Post'
   before_save { email.downcase! }
   validates :name, presence: true
   validates :email, presence: true
@@ -32,4 +34,7 @@ class User < ActiveRecord::Base
   def to_param
     username
   end
+  
+  has_many :favorites
+  has_many :favorite_posts, through: :favorites, source: :favorited, source_type: 'Post'
 end
