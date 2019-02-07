@@ -1,15 +1,17 @@
 <% provide(:title, @user.username) %>
 <div class="row">
-  <aside class="col-md-4">
+  <div class="profile_summary">
     <section class="user_info">
       <h1>
         <%= gravatar_for @user %>
       </h1>
       <h1>
-        <%= "Username: " + @user.username %>
+        <%= "@" + @user.username %>
       </h1>
+      <h4>Joined <%= time_ago_in_words(@user.created_at) %> ago</h4>
     </section>
-  </aside>
+  </div>
+</div>
   <div class="masonry">
   <% Post.where(:user_id => @user.id).each do |post| %>
   <div class="post_item masonry-brick <%= class_finder(post.id) %>">

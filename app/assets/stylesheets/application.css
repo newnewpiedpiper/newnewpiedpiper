@@ -20,6 +20,8 @@ html,body {
         font-size: 13px;
         background-color:#f4f4f4;
         margin:0px;
+        max-width: 100%;
+        overflow-x: hidden;
 }
 header{
     background-color:#4980af;
@@ -159,4 +161,7 @@ w3-border-right {
 }
 .post_content{
     max-width: 500px;
+}
+.profile_summary{
+    padding:20px;
 }
