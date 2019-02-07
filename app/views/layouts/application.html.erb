@@ -43,7 +43,7 @@
   <div class="profile_preview">
   <span>
   <% if logged_in? %>
-  <a href="<%= user_path(get_username(@post.user_id))%>">
+  <a href="<%= user_path(get_username(current_user.id))%>">
   <%= gravatar_for current_user %><br>
   </span>
   @<%= current_user.username %>

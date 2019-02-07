@@ -38,6 +38,7 @@ end
       put "downvote", to: "comments#downvote"
     end
   end
+  resources :channels
   
   # --------Uncomment this (and comment out the root to view Cats channel)
   # root 'viewchannel#index'

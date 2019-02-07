@@ -4,7 +4,7 @@
 <%= form_for @post do |f| %>
  <p>
   <%= f.label "Channel" %><br>
-  <%= f.select :channel_id, [['Memes','1'],['Places','2']] %>
+  <%= f.collection_select :channel_id, Channel.all, :id, :channel_name %>
  </p>
  <p>
   <%= f.label :title %><br>
