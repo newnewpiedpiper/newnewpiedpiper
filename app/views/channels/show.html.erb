@@ -1,4 +1,8 @@
 <h1>#<%= @channel.channel_name %></h1>
+<h4>Channel Description</h4>
+<h5><%= @channel.channel_description %></h5>
+<h4>Channel Rules</h4>
+<h5><%= @channel.channel_guidelines %></h5>
 <div class="masonry">
   <% Post.where(:channel_id => @channel.id).each do |post| %>
   <div class="post_item masonry-brick <%= class_finder(post.id) %>">

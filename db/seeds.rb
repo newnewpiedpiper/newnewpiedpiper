@@ -27,6 +27,7 @@ posts = [
         {:title => 'Morning Yoga', :content=> 'Wanna kick it, Jackie Chan', :user_id => '2', :channel_id => '2', :link => "https://lh3.googleusercontent.com/tXgzSsT1mcjIRnek9nJKgOcmdMk80ZasdSw1FGfPjHKlWntk2g_Zpe1QGNxeAn0nYb2HWCoho_ZHwf9GMk5WUC7MfrvMshcPuAWaqCbno9Iz5JmXhNJw5lKdN7_E8U0wpDpzu3wX8__VflKiFa2XL0AplJhJw3NIgVUk39LdEHJM0z2q_lF14xVDUPS0BIlh1YN4AiQQiw3dv_kcNHh0YHGaoptKlxN-6CG1I2QuHH8Srp2ms84csDul8xqjtycw7PjE76nUu_BiFPgTW48spoKXWDcMzEln1MEHMCfJR3OoQ_mZqa3Wlw3z11tOMYYwte0JME7Fq_KB3aTrM9THVk_Nm_6hRqyRGta7Wg8FBxqHhToBX6revtP_hrjq9jRhEs2o7O0HUEQGQ0Ty9LOxHqfnqn2D8RQuYpLbeF55oBAMu4OJA474vzDLCLIXlq5nxchUGilUxxs38wq62hkHSXlQthdqx7xMunRF10ThBT4fo-7UYfHGPOlQCxtL0X4DbPmfl-4CHVteNqyNeAXmjq9xDlNJbuKSXKnyjKV9coM45NAK2Gr3dyYFLm5vCLNqS4yDIWzWFyq-SAuxIp3jA4ZP4jUxbAfqjEH6KscMyLUSIaEJm23-pqNyaYCfal9UJRQzf3vgEUAo-2uRKb8WUkhgB9qUEkk295cgHRUH4I-nN7SzSTKmKrUAfdSPAe5ywzoHY2GVstDnWEnw_g=w1054-h790-no"},
         {:title => 'Sleepy in Sentosa', :content=> '', :user_id => '4', :channel_id => '2', :link => "https://lh3.googleusercontent.com/be-bSUeg1sIYkiBaTzA0tF634cKhErMMBNtHvlXZzkcFZ9KeTEKB_W-zdXMMDeuqx0UUq4utW-QZhfWOYs1FP_gJjsCxcQGWmfptCzQOaLC6Uy3xfQRzVrLd4AC2LjZ4cRqmhUSamq3QF-0XoJh7zKhIlFlZRfhpK5VmCr0XpifAw9vmAqUmCrctmU06GcyNoms8A2jIRem14cryQp3gZEU30Apvh55GLMVlpHicEai3HxyXXK4JNBUE1yzo44xVLj967hiGe9aeuRCK_sP_V0LNC4tgaFed2MUVqI2DKPM5ZXkUNTHoUGZJVDr3JdwkXP_4G2dBPMLkaqRJNKetNLAEz9SS5aQaV12n2I8Tz_Far3YKlHfOdrjbI5J_GHqz5tCQu0nwLE9RL6BUgkhdI12ea3OSdV2xKqBUGH3v2djE3hCbmc8c8_Y_pmiQumh9yqtmX1OCJEpu2_GP0MfmnJCom2D3uG7F29gO9TZ9dTd2gCrzFmbIQxpYvSMlDVLGmR-nEO0ninslJB41mH_GpozsDUc2U1_QlLLF98mvSsMiocHmjP-pa3jHXR1Fiiz8AMFC4TdmP8HuFmKAqHfM6UN0DyyaziEujSK0cam_h9y5kdHLjEPgIoGnzE61HTRGO1kE1g5EC6FPg6FVLGVIp0je9dH_Heiz13ucwTaKqZmzKXQ-IQJEhytHaVacGxfVCIhecvRAskCkp0Z7pg=w1054-h790-no"},
         {:title => 'Toes', :content=> 'Have you ever thought about them?', :user_id => '4', :channel_id => '1', :link => "https://images.store.hmv.com/app_/responsive/HMVStore/media/product/643604/01-643604.jpg?w=500"},
+        {:title => 'Rick', :content=> '', :user_id => '1', :channel_id => '1', :link => "https://www.youtube.com/embed/dQw4w9WgXcQ"},
 
   	 ]
 
@@ -36,19 +37,19 @@ end
 
 users = [
 
-    { :name => "Vinayak Chetlapalli", :email => "vinayakc@tamu.edu", :username => "vin_diesel", :password => "laptop07", :password_confirmation =>  "laptop07"}, 
-    { :name => "Annie Blakeslee", :email => "annieblakeslee@tamu.edu", :username => "any", :password => "testpassword", :password_confirmation => "testpassword"},
-    { :name => "Amanda Easter", :email => "me@amandaeaster.com", :username => "amandapanda", :password => "testpassword", :password_confirmation => "testpassword"},
-    { :name => "Reed Hampton", :email => "reedbhampton@gmail.com", :username => "iliketoreed", :password => "testpassword", :password_confirmation => "testpassword"},
-    { :name => "Omar Santos", :email => "omars98@tamu.edu", :username => "god_is_an_omar", :password => "testpassword", :password_confirmation => "testpassword"},
+    { :name => "Vinayak Chetlapalli", :email => "vinayakc@tamu.edu", :username => "vin_diesel", :password => "laptop07", :password_confirmation =>  "laptop07", :subscriptions =>  "1,2"}, 
+    { :name => "Annie Blakeslee", :email => "annieblakeslee@tamu.edu", :username => "any", :password => "testpassword", :password_confirmation => "testpassword", :subscriptions =>  "1,2"},
+    { :name => "Amanda Easter", :email => "me@amandaeaster.com", :username => "amandapanda", :password => "testpassword", :password_confirmation => "testpassword", :subscriptions =>  "1,2"},
+    { :name => "Reed Hampton", :email => "reedbhampton@gmail.com", :username => "iliketoreed", :password => "testpassword", :password_confirmation => "testpassword", :subscriptions =>  "1,2"},
+    { :name => "Omar Santos", :email => "omars98@tamu.edu", :username => "god_is_an_omar", :password => "testpassword", :password_confirmation => "testpassword", :subscriptions =>  "1,2"},
 ]
 
 users.each do |user|
     User.create!(user)
 end 
 
-channels = [{:channel_name => "memes", :channel_description => "All dogs all the time", :channel_guidelines => "Don\'t post cats!", :moderators => 1, :postid => "1,2"},
-            {:channel_name => "places", :channel_description => "A channel for cats", :channel_guidelines => "Don\'t post dogs!", :moderators => 2, :postid => "3,4"}
+channels = [{:channel_name => "memes", :channel_description => "Post all your quality memes here", :channel_guidelines => "Don\'t repost", :moderators => 1, :postid => "1,2"},
+            {:channel_name => "places", :channel_description => "Share beautiful places across the world", :channel_guidelines => "No ficticious places", :moderators => 2, :postid => "3,4"}
            ]
 
 channels.each do |channel|
