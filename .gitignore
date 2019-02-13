@@ -16,5 +16,8 @@
 !/log/.keep
 /tmp
 
+#Ignore solr and coverage
+/solr
+/coverage
 # From .bundle/config
 BUNDLE_WITHOUT: "production"
