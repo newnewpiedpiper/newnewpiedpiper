@@ -3,15 +3,21 @@
  <% @posts.each do |post| %>
  <div class="post_item masonry-brick <%= class_finder(post.id) %>">
   <a href="<%= user_path(get_username(post.user_id))%>">@<%= get_username(post.user_id)%></a><br>
-  #<%= get_channel_name(post.channel_id) %>
+  <a href="<%= channel_path(@post.channel_id)%>">#<%= get_channel_name(@post.channel_id) %></a>
  <a href=<%= post_path(post) %>>
-  <h2><%= post.title %></h2> </a>
-  <h3><%= post.content %></h3>
-  <center><%= image_tag attachment_url(@post, :media_content, format: "jpg"), :class => "post_image" %></center>
-  <div class="comment-count">
+  <h2><%= post.title %></h2> 
+  <h3 class="post_content"><%= post.content %></h3>
+  <% if(@post.link== "" || @post.link.nil?) %>
+ <center><%= image_tag attachment_url(@post, :media_content, format: "jpg"), :class => "post_image" %></center>
+ <% else %>
+ <center><iframe width="700px" height="400px" src="<%= @post.link %>" frameborder="0" allowfullscreen></iframe></center>
+<% end %>
+ </a>
+  <a href=<%= post_path(post) %>><div class="comment-count">
                 <span class="tag is-rounded"><%= post.comments.count %> comments</span>
-            </div>
+            </div></a>
   <%= render 'posts/votes', :@post => post %>
+  
  </div>
 
  <% end %>

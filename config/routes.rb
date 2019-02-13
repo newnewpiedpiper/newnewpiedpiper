@@ -38,6 +38,13 @@ end
       put "downvote", to: "comments#downvote"
     end
   end
+  resources :channels
+  resources :channels do
+    member do
+      put "subscribe", to: "channels#subscribe"
+      put "unsubscribe", to: "channels#unsubscribe"
+    end
+  end
   
   # --------Uncomment this (and comment out the root to view Cats channel)
   # root 'viewchannel#index'

@@ -7,8 +7,11 @@
   <%= csrf_meta_tags %>
 </head>
 <header>
+  <% if logged_in? %> 
+   
   <button id=sidebar class="menu_toggle" onclick="w3_open()", id = "Side Bar">☰</button>
 
+  <% end %>
   <a href=<%= root_path %>><div class="site_title"><img class="logo" src="/images/sling-white.png" alt="Sling" /></div></a>
   <div class="menu_right_align">
   <%= form_tag(search_page_path, :method => "get",   
@@ -37,15 +40,18 @@
   
 </header>
 <body>
+   <% if logged_in? %>
 <div class="w3-sidebar w3-bar-block w3-border-right" id="mySidebar">
   <a onclick="w3_close()" class="w3-bar-item w3-large">&#10006;</a><br>
- 
+
   <div class="profile_preview">
   <span>
-  <% if logged_in? %>
+  
+  <a href="<%= user_path(get_username(current_user.id))%>">
   <%= gravatar_for current_user %><br>
   </span>
   @<%= current_user.username %>
+  </a>
   <br>
   </div>
   <hr>
@@ -53,6 +59,7 @@
   <%= link_to "Profile", current_user %><br>
 
   <%= link_to "Create new post", new_post_path, id: "create_post" %><br>
+  <%= link_to "Create new channel", new_channel_path, id: "create_channel" %><br>
    
    
     

@@ -3,20 +3,25 @@
 <div class="main_post_item">
 <%= link_to "Back", root_path %>
 <span class="edit">
-<% if !current_user.nil? && check_permissions(current_user.id) %>
+<% if !current_user.nil? && check_time_permissions(current_user.id, @post.id) %>
 <%= link_to 'Edit', edit_post_path(@post) %>
-<% else %>
+<% elsif !current_user.nil? && check_permissions(@post.id) %>
+<%= link_to 'Delete', @post, :method => :delete, :data => {:confirm => 'Are you sure?'} %>
 <% end %>
 </span>
 <br>
 <a href="<%= user_path(get_username(@post.user_id))%>">@<%= get_username(@post.user_id)%></a>
-<br>#<%= get_channel_name(@post.channel_id) %><br>
+<br><a href="<%= channel_path(@post.channel_id)%>">#<%= get_channel_name(@post.channel_id) %><br></a>
 <h1><%= @post.title %></h1>
 <h3>
 <%= @post.content %>
 </h3>
+<% if(@post.link.nil? || @post.link == "") %>
 <center><%= image_tag attachment_url(@post, :media_content, format: "jpg"), :class => "post_image" %></center>
-
+<% else %>
+<center><iframe width="700px" height="400px" src="<%= @post.link %>" frameborder="0" allowfullscreen></iframe></center>
+<% end %>
+<small class="comment-count">Posted <%= time_ago_in_words(@post.created_at) %> ago</small>
 <%= render 'posts/votes', :@post => @post %>
 
 </div>
