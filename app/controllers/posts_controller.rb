@@ -3,6 +3,11 @@ class PostsController < ApplicationController
       format.js {render layout: false} # Add this line to you respond_to block
     end
     def index
+        @posts = Post.all
+        @posts = current_user.favorite_posts
+        # @posts = Post.order('created_at DESC')
+        @posts=Post.order('cast(created_at as date) desc, cached_votes_up desc')
+
         if current_user.nil?
             @posts = Post.all
             # @posts = Post.order('created_at DESC')
@@ -11,6 +16,7 @@ class PostsController < ApplicationController
             @posts = Post.where(channel_id: current_user.subscriptions)
             @posts=Post.order('cast(created_at as date) asc, cached_votes_score desc')
         end
+
     end
     def new
         @post = Post.new
@@ -24,6 +30,13 @@ class PostsController < ApplicationController
        render 'new'
       end
     end
+    
+    #def bookmark
+    #    @post = Post.find(params[:id])
+    #    @post = Post.bookmark_by current_user
+    #    flash[:notice] = "Added to bookmarks!"
+    #end
+    
     def edit
       @post = Post.find(params[:id])
     end

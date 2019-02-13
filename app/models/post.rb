@@ -3,8 +3,10 @@ class Post < ActiveRecord::Base
   searchable do 
     text :title, :content
   end 
+
   validates :title, length: { minimum: 2 }
   validates :title, length: { maximum: 200 }
+    has_many :favorites, as: :favorited
     has_many :comments, as: :commentable
     acts_as_votable
     def score

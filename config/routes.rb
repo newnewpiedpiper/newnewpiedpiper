@@ -18,6 +18,7 @@ Rails.application.routes.draw do
   get '/search', to: 'search#search', :as => 'search_page'
   
   resources :users, param: :username
+  resources :favorite_posts, only: [:create, :destroy]
 
   resources :posts do
     resources :comments
