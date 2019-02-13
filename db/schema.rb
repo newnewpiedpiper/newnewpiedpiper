@@ -31,11 +31,10 @@ ActiveRecord::Schema.define(version: 20190207215013) do
     t.text     "body"
     t.integer  "user_id"
     t.integer  "post_id"
-    t.datetime "created_at",                     null: false
-    t.datetime "updated_at",                     null: false
-    t.integer  "parent_id"
     t.integer  "commentable_id"
     t.string   "commentable_type"
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
     t.integer  "cached_votes_total", default: 0
     t.integer  "cached_votes_score", default: 0
     t.integer  "cached_votes_up",    default: 0
@@ -46,6 +45,7 @@ ActiveRecord::Schema.define(version: 20190207215013) do
   add_index "comments", ["cached_votes_score"], name: "index_comments_on_cached_votes_score"
   add_index "comments", ["cached_votes_total"], name: "index_comments_on_cached_votes_total"
   add_index "comments", ["cached_votes_up"], name: "index_comments_on_cached_votes_up"
+  add_index "comments", ["commentable_id", "commentable_type"], name: "index_comments_on_commentable_id_and_commentable_type"
   add_index "comments", ["post_id"], name: "index_comments_on_post_id"
   add_index "comments", ["user_id"], name: "index_comments_on_user_id"
 
@@ -76,10 +76,11 @@ ActiveRecord::Schema.define(version: 20190207215013) do
   create_table "users", force: :cascade do |t|
     t.string   "name"
     t.string   "email"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.datetime "created_at",                      null: false
+    t.datetime "updated_at",                      null: false
     t.string   "password_digest"
     t.string   "username"
+    t.boolean  "admin",           default: false
     t.string   "subscriptions"
   end
 

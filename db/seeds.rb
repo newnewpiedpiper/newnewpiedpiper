@@ -37,21 +37,23 @@ end
 
 users = [
 
-    { :name => "Vinayak Chetlapalli", :email => "vinayakc@tamu.edu", :username => "vin_diesel", :password => "laptop07", :password_confirmation =>  "laptop07", :subscriptions =>  "1,2"}, 
-    { :name => "Annie Blakeslee", :email => "annieblakeslee@tamu.edu", :username => "any", :password => "testpassword", :password_confirmation => "testpassword", :subscriptions =>  "1,2"},
-    { :name => "Amanda Easter", :email => "me@amandaeaster.com", :username => "amandapanda", :password => "testpassword", :password_confirmation => "testpassword", :subscriptions =>  "1,2"},
-    { :name => "Reed Hampton", :email => "reedbhampton@gmail.com", :username => "iliketoreed", :password => "testpassword", :password_confirmation => "testpassword", :subscriptions =>  "1,2"},
-    { :name => "Omar Santos", :email => "omars98@tamu.edu", :username => "god_is_an_omar", :password => "testpassword", :password_confirmation => "testpassword", :subscriptions =>  "1,2"},
+
+    { :name => "Vinayak Chetlapalli", :email => "vinayakc@tamu.edu", :username => "vin_diesel", :password => "laptop07", :password_confirmation =>  "laptop07", :subscriptions =>  "1,2",admin:false}, 
+    { :name => "Annie Blakeslee", :email => "annieblakeslee@tamu.edu", :username => "any", :password => "testpassword", :password_confirmation => "testpassword", :subscriptions =>  "1,2",admin:false},
+    { :name => "Amanda Easter", :email => "me@amandaeaster.com", :username => "amandapanda", :password => "testpassword", :password_confirmation => "testpassword", :subscriptions =>  "1,2",admin:false},
+    { :name => "Reed Hampton", :email => "reedbhampton@gmail.com", :username => "iliketoreed", :password => "testpassword", :password_confirmation => "testpassword", :subscriptions =>  "1,2",admin:false},
+    { :name => "Omar Santos", :email => "omars98@tamu.edu", :username => "god_is_an_omar", :password => "testpassword", :password_confirmation => "testpassword", :subscriptions =>  "1,2",admin:false},
+
 ]
 
 users.each do |user|
     User.create!(user)
 end 
 
-channels = [{:channel_name => "memes", :channel_description => "Post all your quality memes here", :channel_guidelines => "Don\'t repost", :moderators => "1,3"},
-            {:channel_name => "places", :channel_description => "Share beautiful places across the world", :channel_guidelines => "No ficticious places", :moderators => "1,3"}
-           ]
+channels = [{:channel_name => "memes", :channel_description => "Post all your quality memes here", :channel_guidelines => "Don\'t repost", :moderators => 1, :postid => "1,2"},
+            {:channel_name => "places", :channel_description => "Share beautiful places across the world", :channel_guidelines => "No ficticious places", :moderators => "2", :postid => "1,2"}
 
+]
 channels.each do |channel|
   Channel.create!(channel)
 end

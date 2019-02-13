@@ -1,16 +1,67 @@
 {
   "Cucumber Features": {
     "coverage": {
+<<<<<<< HEAD
       "/home/ubuntu/Ruby/newnewpiedpiper/app/helpers/application_helper.rb": [
+=======
+      "/home/ubuntu/workspace/newnewpiedpiper/app/models/post.rb": [
+        1,
+        null,
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        28,
+        null,
+        null
+      ],
+      "/home/ubuntu/workspace/newnewpiedpiper/app/models/user.rb": [
+        1,
+        49,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null,
+        1,
+        1,
+        null,
+>>>>>>> 0f65e8d293ff8b1768dc3ff892b5c180372bd2da
         1,
         1,
         0,
         0,
         null,
         1,
+<<<<<<< HEAD
         0,
         0,
         null,
+=======
+        54,
+        null,
+        null
+      ],
+      "/home/ubuntu/workspace/newnewpiedpiper/app/controllers/posts_controller.rb": [
+        1,
+>>>>>>> 0f65e8d293ff8b1768dc3ff892b5c180372bd2da
         1,
         3,
         0,
@@ -51,10 +102,54 @@
         0,
         0,
         0,
+<<<<<<< HEAD
         0,
         0,
         0,
         0,
+=======
+        null,
+        1,
+        1,
+        2,
+        null,
+        null
+      ],
+      "/home/ubuntu/workspace/newnewpiedpiper/app/controllers/application_controller.rb": [
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/home/ubuntu/workspace/newnewpiedpiper/app/helpers/application_helper.rb": [
+        1,
+        1,
+        8,
+        8,
+        null,
+        1,
+        0,
+        0,
+        null,
+        1,
+        240,
+        208,
+        null,
+        0,
+        0,
+        null,
+        null,
+        1,
+        90,
+        90,
+        null,
+        1,
+        60,
+>>>>>>> 0f65e8d293ff8b1768dc3ff892b5c180372bd2da
         0,
         0,
         0,
@@ -89,31 +184,35 @@
         null,
         null
       ],
+<<<<<<< HEAD
       "/home/ubuntu/Ruby/newnewpiedpiper/app/helpers/channels_helper.rb": [
         1,
         null
       ],
       "/home/ubuntu/Ruby/newnewpiedpiper/app/helpers/home_helper.rb": [
+=======
+      "/home/ubuntu/workspace/newnewpiedpiper/app/helpers/home_helper.rb": [
         1,
         null
       ],
-      "/home/ubuntu/Ruby/newnewpiedpiper/app/helpers/posts_helper.rb": [
+      "/home/ubuntu/workspace/newnewpiedpiper/app/helpers/posts_helper.rb": [
+>>>>>>> 0f65e8d293ff8b1768dc3ff892b5c180372bd2da
         1,
         null
       ],
-      "/home/ubuntu/Ruby/newnewpiedpiper/app/helpers/search_helper.rb": [
+      "/home/ubuntu/workspace/newnewpiedpiper/app/helpers/search_helper.rb": [
         1,
         null
       ],
-      "/home/ubuntu/Ruby/newnewpiedpiper/app/helpers/sessions_helper.rb": [
+      "/home/ubuntu/workspace/newnewpiedpiper/app/helpers/sessions_helper.rb": [
         1,
         null
       ],
-      "/home/ubuntu/Ruby/newnewpiedpiper/app/helpers/upvotes_helper.rb": [
+      "/home/ubuntu/workspace/newnewpiedpiper/app/helpers/upvotes_helper.rb": [
         1,
         null
       ],
-      "/home/ubuntu/Ruby/newnewpiedpiper/app/helpers/users_helper.rb": [
+      "/home/ubuntu/workspace/newnewpiedpiper/app/helpers/users_helper.rb": [
         1,
         null,
         null,
@@ -124,13 +223,21 @@
         null,
         null
       ],
-      "/home/ubuntu/Ruby/newnewpiedpiper/app/helpers/viewchannel_helper.rb": [
+      "/home/ubuntu/workspace/newnewpiedpiper/app/helpers/viewchannel_helper.rb": [
         1,
         null
       ],
+<<<<<<< HEAD
       "/home/ubuntu/Ruby/newnewpiedpiper/app/models/post.rb": [
         1,
         1,
+=======
+      "/home/ubuntu/workspace/newnewpiedpiper/app/models/channel.rb": [
+        1,
+        null
+      ],
+      "/home/ubuntu/workspace/newnewpiedpiper/app/models/comment.rb": [
+>>>>>>> 0f65e8d293ff8b1768dc3ff892b5c180372bd2da
         1,
         1,
         null,
@@ -139,11 +246,14 @@
         1,
         1,
         1,
+<<<<<<< HEAD
         0,
         null,
         null
       ],
       "/home/ubuntu/Ruby/newnewpiedpiper/app/models/user.rb": [
+=======
+>>>>>>> 0f65e8d293ff8b1768dc3ff892b5c180372bd2da
         1,
         6,
         1,
@@ -151,6 +261,24 @@
         1,
         1,
         null,
+<<<<<<< HEAD
+=======
+        null
+      ],
+      "/home/ubuntu/workspace/newnewpiedpiper/app/controllers/users_controller.rb": [
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null,
+        null,
+>>>>>>> 0f65e8d293ff8b1768dc3ff892b5c180372bd2da
         1,
         null,
         null,
@@ -161,8 +289,46 @@
         null,
         1,
         1,
+<<<<<<< HEAD
         1,
         1,
+=======
+        8,
+        8,
+        8,
+        8,
+        8,
+        null,
+        0,
+        null,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null,
+        null,
+        1,
+        0,
+        0,
+        null,
+        0,
+        0,
+        null,
+        0,
+        null,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        null,
+        null,
+        null,
+        null,
+        null,
+>>>>>>> 0f65e8d293ff8b1768dc3ff892b5c180372bd2da
         1,
         null,
         1,
@@ -173,10 +339,27 @@
         null,
         1,
         0,
+        null,
+        1,
+        0,
+        0,
+        0,
+        null,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null,
+        null,
         null,
         null
       ],
+<<<<<<< HEAD
       "/home/ubuntu/Ruby/newnewpiedpiper/app/controllers/posts_controller.rb": [
+=======
+      "/home/ubuntu/workspace/newnewpiedpiper/app/controllers/comments_controller.rb": [
+>>>>>>> 0f65e8d293ff8b1768dc3ff892b5c180372bd2da
         1,
         1,
         0,
@@ -207,6 +390,7 @@
         0,
         null,
         1,
+<<<<<<< HEAD
         0,
         0,
         0,
@@ -215,6 +399,10 @@
         0,
         0,
         null,
+=======
+        1,
+        1,
+>>>>>>> 0f65e8d293ff8b1768dc3ff892b5c180372bd2da
         null,
         1,
         0,
@@ -252,6 +440,7 @@
         null,
         null
       ],
+<<<<<<< HEAD
       "/home/ubuntu/Ruby/newnewpiedpiper/app/models/comment.rb": [
         0,
         0,
@@ -270,48 +459,26 @@
         0
       ],
       "/home/ubuntu/Ruby/newnewpiedpiper/app/models/viewchannelinfo.rb": [
+=======
+      "/home/ubuntu/workspace/newnewpiedpiper/app/controllers/home_controller.rb": [
+        0,
+>>>>>>> 0f65e8d293ff8b1768dc3ff892b5c180372bd2da
+        0,
         0,
         0
       ],
-      "/home/ubuntu/Ruby/newnewpiedpiper/app/models/viewchannelpost.rb": [
-        0,
-        0
-      ],
+<<<<<<< HEAD
       "/home/ubuntu/Ruby/newnewpiedpiper/app/models/channel.rb": [
         0,
         0,
         0
       ],
       "/home/ubuntu/Ruby/newnewpiedpiper/app/controllers/channels_controller.rb": [
+=======
+      "/home/ubuntu/workspace/newnewpiedpiper/app/controllers/upvotes_controller.rb": [
         0,
         0,
-        0,
-        null,
-        0,
-        0,
-        null,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-      ],
-      "/home/ubuntu/Ruby/newnewpiedpiper/app/controllers/home_controller.rb": [
-        0,
-        0,
-        0,
-        0
-      ],
-      "/home/ubuntu/Ruby/newnewpiedpiper/app/controllers/search_controller.rb": [
-        0,
-        0,
-        0,
+>>>>>>> 0f65e8d293ff8b1768dc3ff892b5c180372bd2da
         0,
         0,
         0,
@@ -319,8 +486,35 @@
         0,
         null,
         0,
+<<<<<<< HEAD
         0,
         0,
+        0,
+        0,
+=======
+>>>>>>> 0f65e8d293ff8b1768dc3ff892b5c180372bd2da
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        null,
+        0,
+        0,
+        0,
+<<<<<<< HEAD
         0
       ],
       "/home/ubuntu/Ruby/newnewpiedpiper/app/controllers/comments_controller.rb": [
@@ -374,6 +568,33 @@
         0
       ],
       "/home/ubuntu/Ruby/newnewpiedpiper/app/controllers/sessions_controller.rb": [
+=======
+>>>>>>> 0f65e8d293ff8b1768dc3ff892b5c180372bd2da
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "/home/ubuntu/workspace/newnewpiedpiper/app/controllers/link_controller.rb": [
+        0,
+        null,
+        0
+      ],
+      "/home/ubuntu/workspace/newnewpiedpiper/app/controllers/sessions_controller.rb": [
         0,
         null,
         0,
@@ -401,46 +622,20 @@
         0,
         0
       ],
-      "/home/ubuntu/Ruby/newnewpiedpiper/app/controllers/upvotes_controller.rb": [
-        0,
-        0,
-        0,
-        0,
-        0,
+      "/home/ubuntu/workspace/newnewpiedpiper/app/controllers/viewchannel_controller.rb": [
         0,
         0,
         null,
         0,
         0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+        null,
         0,
         null,
         0,
         0,
+        null,
         0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+        null,
         0,
         0,
         0,
@@ -448,9 +643,27 @@
         0,
         0
       ],
-      "/home/ubuntu/Ruby/newnewpiedpiper/app/controllers/link_controller.rb": [
+      "/home/ubuntu/workspace/newnewpiedpiper/app/controllers/search_controller.rb": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
         0,
         null,
+        0,
+        0,
+        0,
+        0
+      ],
+      "/home/ubuntu/workspace/newnewpiedpiper/app/models/viewchannelinfo.rb": [
+        0,
+        0
+      ],
+      "/home/ubuntu/workspace/newnewpiedpiper/app/models/viewchannelpost.rb": [
+        0,
         0
       ],
       "/home/ubuntu/Ruby/newnewpiedpiper/app/controllers/users_controller.rb": [
@@ -492,6 +705,10 @@
         0
       ]
     },
+<<<<<<< HEAD
     "timestamp": 1549575062
+=======
+    "timestamp": 1549828932
+>>>>>>> 0f65e8d293ff8b1768dc3ff892b5c180372bd2da
   }
 }

@@ -26,8 +26,8 @@ Background: posts in database
   And I fill in "Email" with "sample1@gmail.com"
   And I fill in "Username" with "test_username"
   And I fill in "Password" with "password"
-  And I fill in "Confirmation" with "password"
-  And I click the "Create My Account" button
+  And I fill in "Password confirmation" with "password"
+  And I click the "Create my account" button
   Then I should see "test_username"
   
 Scenario: view a post

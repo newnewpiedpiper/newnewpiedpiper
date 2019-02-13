@@ -14,16 +14,20 @@ class User < ActiveRecord::Base
   #                   uniqueness: { case_sensitive: false }
                     
   has_secure_password
-  validates :password, presence: true, length: { minimum: 6 }
-  has_many :favorites, dependent: :destroy
+   validates :password, presence: true, length: { minimum: 6 }, allow_nil: true
+   
+   #not letting me delete user?
+  #has_many :favorites, dependent: :destroy
   has_many :comments, dependent: :destroy
-  has_many :upvotes, dependent: :destroy
+  has_many :posts, dependent: :destroy
+
+  has_many :upvotes
   
    def User.digest(string)
     cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST :
                                                   BCrypt::Engine.cost
     BCrypt::Password.create(string, cost: cost)
-  end
+   end
   
   def to_param
     username
