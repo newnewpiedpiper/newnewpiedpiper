@@ -19,6 +19,7 @@ Rails.application.routes.draw do
   
   resources :users, param: :username
   resources :favorite_posts, only: [:create, :destroy]
+  resources :favorites
 
   resources :posts do
     resources :comments
