@@ -160,7 +160,8 @@ w3-border-right {
     text-align: left;
 }
 .post_content{
-    max-width: 500px;
+    max-width: 600px;
+    text-align: left;
 }
 .profile_summary{
     padding:20px;

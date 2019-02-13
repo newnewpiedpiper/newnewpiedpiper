@@ -1,7 +1,7 @@
 <div class="post_page">
 <div class="main_post_content">
 <div class="main_post_item">
-<%= link_to "Back", root_path %>
+<%= link_to 'Back', :back %>
 <span class="edit">
 <% if !current_user.nil? && check_time_permissions(current_user.id, @post.id) %>
 <%= link_to 'Edit', edit_post_path(@post) %>
@@ -13,9 +13,7 @@
 <a href="<%= user_path(get_username(@post.user_id))%>">@<%= get_username(@post.user_id)%></a>
 <br><a href="<%= channel_path(@post.channel_id)%>">#<%= get_channel_name(@post.channel_id) %><br></a>
 <h1><%= @post.title %></h1>
-<h3>
-<%= @post.content %>
-</h3>
+<h3><%= @post.content %></h3>
 <% if(@post.link.nil? || @post.link == "") %>
 <center><%= image_tag attachment_url(@post, :media_content, format: "jpg"), :class => "post_image" %></center>
 <% else %>
