@@ -1,0 +1,27 @@
+<h1>Create a Channel</h1>
+<center>
+ <div class="new_post_form">
+<%= form_for @channel do |f| %>
+ <p>
+  <%= f.label :channel_name %><br>
+  <%= f.text_field :channel_name %>
+ </p>
+ <p>
+  <%= f.label :channel_description %><br>
+  <%= f.text_area :channel_description %>
+ </p>
+ <p>
+  <%= f.label :channel_guidelines %><br>
+  <%= f.text_area :channel_guidelines %>
+ </p>
+ <p id="photo_gif">
+  <%= f.label "Channel Image" %><br>
+  <%= f.attachment_field :channel_image %>
+ </p>
+  <%= f.hidden_field :moderators, :value => current_user.id.to_s+"," %>
+ <p>
+  <%= f.submit %>
+ </p>
+<% end %>
+</div>
+</center>

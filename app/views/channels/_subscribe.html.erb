@@ -1,0 +1,14 @@
+<% @channel = Channel.find(params[:id]) %>
+<div id="subscription_button">
+<% if !current_user.nil? && check_subcription(@channel.id) %>
+    <%= link_to unsubscribe_channel_path(@channel.id), method: :put,remote: true do %>
+    <div class="unsubscribe_button">&#8722;</div>
+    <% end %>
+<% elsif !current_user.nil? && !check_subcription(@channel.id) %>
+    <%= link_to subscribe_channel_path(@channel.id), method: :put,remote: true do %>
+    <div class="subscribe_button">&#43;</div>
+    <% end %>
+<% else %>
+
+<% end %>
+</div>
