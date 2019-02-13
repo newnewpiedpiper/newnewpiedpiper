@@ -5,7 +5,7 @@
 <span class="edit">
 <% if !current_user.nil? && check_time_permissions(current_user.id, @post.id) %>
 <%= link_to 'Edit', edit_post_path(@post) %>
-<% elsif !current_user.nil? && check_permissions(@post.id) %>
+<% elsif !current_user.nil? && check_permissions(@post.user_id) %>
 <%= link_to 'Delete', @post, :method => :delete, :data => {:confirm => 'Are you sure?'} %>
 <% end %>
 </span>
