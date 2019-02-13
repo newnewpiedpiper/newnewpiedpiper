@@ -11,16 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190207205837) do
+ActiveRecord::Schema.define(version: 20190207215013) do
 
   create_table "channels", force: :cascade do |t|
     t.text     "channel_name"
     t.text     "channel_description"
     t.text     "channel_guidelines"
-    t.integer  "moderators"
+    t.string   "moderators"
     t.text     "postid"
-    t.datetime "created_at",          null: false
-    t.datetime "updated_at",          null: false
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+    t.string   "channel_image_id"
+    t.string   "channel_image_filename"
+    t.string   "channel_image_size"
+    t.string   "channel_image_type"
   end
 
   create_table "comments", force: :cascade do |t|

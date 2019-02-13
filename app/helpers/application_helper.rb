@@ -46,10 +46,6 @@ module ApplicationHelper
             
             current = Time.now.utc
             created= Post.find(post_id).created_at
-            puts "Current"
-            puts current
-            puts "Created"
-            puts created
             a= current-created
             difference=a / 60
             puts "Difference"

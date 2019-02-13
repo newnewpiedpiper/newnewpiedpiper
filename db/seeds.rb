@@ -48,8 +48,8 @@ users.each do |user|
     User.create!(user)
 end 
 
-channels = [{:channel_name => "memes", :channel_description => "Post all your quality memes here", :channel_guidelines => "Don\'t repost", :moderators => 1, :postid => "1,2"},
-            {:channel_name => "places", :channel_description => "Share beautiful places across the world", :channel_guidelines => "No ficticious places", :moderators => 2, :postid => "3,4"}
+channels = [{:channel_name => "memes", :channel_description => "Post all your quality memes here", :channel_guidelines => "Don\'t repost", :moderators => "1,3"},
+            {:channel_name => "places", :channel_description => "Share beautiful places across the world", :channel_guidelines => "No ficticious places", :moderators => "1,3"}
            ]
 
 channels.each do |channel|
