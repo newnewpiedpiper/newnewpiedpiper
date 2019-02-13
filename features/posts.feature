@@ -7,9 +7,9 @@ Feature: create and view posts
 Background: posts in database
 
   Given the following posts exist:
-  | title     | content                      | votes | user_id  | channel_id  | link                                                                                                                                                  |
-  | 'Doggo'   | 'Dogs are the best animal'   | 25    | 1        | 1           | https://static.scientificamerican.com/sciam/cache/file/D059BC4A-CCF3-4495-849ABBAFAED10456_source.jpg?w=590&h=800&526ED1E1-34FF-4472-B348B8B4769AB2A1'|
-  | 'Puppies' | 'Puppies are so small!       | 24    | 1        | 1           |                                                                                                                                                       |
+  | title     | content                      |  user_id  | channel_id  | link                                                                                                                                                  |
+  | 'Doggo'   | 'Dogs are the best animal'   |  1        | 1           | https://static.scientificamerican.com/sciam/cache/file/D059BC4A-CCF3-4495-849ABBAFAED10456_source.jpg?w=590&h=800&526ED1E1-34FF-4472-B348B8B4769AB2A1'|
+  | 'Puppies' | 'Puppies are so small!       |  1        | 1           |                                                                                                                                                       |
   
 
   Given the following users exist:
@@ -26,8 +26,8 @@ Background: posts in database
   And I fill in "Email" with "sample1@gmail.com"
   And I fill in "Username" with "test_username"
   And I fill in "Password" with "password"
-  And I fill in "Confirmation" with "password"
-  And I click the "Create My Account" button
+  And I fill in "Password confirmation" with "password"
+  And I click the "Create my account" button
   Then I should see "test_username"
   
 Scenario: view a post
@@ -76,3 +76,10 @@ Scenario: view creator of a post
 Scenario: view upvotes
   Given I am viewing post with id 1
   Then I should see "▲ 0 ▼"
+ 
+@javascript  
+Scenario: upvote
+  Given I am viewing post with id 1
+  And I follow "▲"
+  And I wait for ajax
+  Then I should see "1"

@@ -7,6 +7,26 @@ SimpleCov.start 'rails'
 # files.
 
 require 'cucumber/rails'
+require 'selenium/webdriver'
+require 'rspec/rails'
+
+Capybara.register_driver :chrome do |app|
+  Capybara::Selenium::Driver.new(app, browser: :chrome)
+end
+
+ Capybara.register_driver :headless_chrome do |app|
+ capabilities = Selenium::WebDriver::Remote::Capabilities.chrome(
+   chromeOptions: { args: %w(headless disable-gpu) }
+ )
+
+ Capybara::Selenium::Driver.new app,
+  browser: :chrome,
+  desired_capabilities: capabilities
+end
+
+Capybara.javascript_driver = :headless_chrome
+# Capybara.server = :webrick
+# WebMock.disable_net_connect!(allow_localhost: true)
 
 # Capybara defaults to CSS3 selectors rather than XPath.
 # If you'd prefer to use XPath, just uncomment this line and adjust any
@@ -58,3 +78,7 @@ end
 # See https://github.com/cucumber/cucumber-rails/blob/master/features/choose_javascript_database_strategy.feature
 Cucumber::Rails::Database.javascript_strategy = :truncation
 
+Sunspot::Rails::Server.new.start
+at_exit do
+Sunspot::Rails::Server.new.stop
+end

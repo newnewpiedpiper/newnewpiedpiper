@@ -7,6 +7,16 @@ class PostsController < ApplicationController
         @posts = current_user.favorite_posts
         # @posts = Post.order('created_at DESC')
         @posts=Post.order('cast(created_at as date) desc, cached_votes_up desc')
+
+        if current_user.nil?
+            @posts = Post.all
+            # @posts = Post.order('created_at DESC')
+            @posts=Post.order('cast(created_at as date) asc, cached_votes_score desc')
+        else
+            @posts = Post.where(channel_id: current_user.subscriptions)
+            @posts=Post.order('cast(created_at as date) asc, cached_votes_score desc')
+        end
+
     end
     def new
         @post = Post.new
@@ -54,9 +64,14 @@ class PostsController < ApplicationController
       @post = Post.find(params[:id])
       @post.downvote_by current_user
         render :template => "posts/votes"    end
+    def destroy
+      @post = Post.find(params[:id])
+      @post.destroy
     
+      redirect_to root_path
+    end
     private
     def post_params
-        params.require(:post).permit(:channel_id, :title, :content, :link, :user_id)
+        params.require(:post).permit(:channel_id, :title, :content, :link, :user_id, :media_content)
     end
 end

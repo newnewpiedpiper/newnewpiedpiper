@@ -1,15 +1,35 @@
 <% provide(:title, @user.username) %>
 <div class="row">
-  <aside class="col-md-4">
+  <div class="profile_summary">
     <section class="user_info">
       <h1>
         <%= gravatar_for @user %>
       </h1>
       <h1>
-        <%= "Username: " + @user.username %>
-        
+        <%= "@" + @user.username %>
       </h1>
-      
+      <h4>Joined <%= time_ago_in_words(@user.created_at) %> ago</h4>
     </section>
-  </aside>
+  </div>
+</div>
+  <div class="masonry">
+  <% Post.where(:user_id => @user.id).each do |post| %>
+  <div class="post_item masonry-brick <%= class_finder(post.id) %>">
+  <a href="<%= user_path(get_username(post.user_id))%>">@<%= get_username(post.user_id)%></a><br>
+  <a href="<%= channel_path(post.channel_id)%>">#<%= get_channel_name(post.channel_id) %></a>
+ <a href=<%= post_path(post) %>>
+  <h2><%= post.title %></h2> </a>
+  <h3 class="post_content"><%= post.content %></h3>
+  <% if(@post.link== "" || @post.link.nil?) %>
+ <center><%= image_tag attachment_url(@post, :media_content, format: "jpg"), :class => "post_image" %></center>
+ <% else %>
+ <center><iframe width="700px" height="400px" src="<%= @post.link %>" frameborder="0" allowfullscreen></iframe></center>
+<% end %>
+  <div class="comment-count">
+                <span class="tag is-rounded"><%= post.comments.count %> comments</span>
+            </div>
+  <%= render 'posts/votes', :@post => post %>
+ </div>
+  <% end %>
+  </div>
 </div>

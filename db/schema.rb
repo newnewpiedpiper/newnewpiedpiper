@@ -13,14 +13,19 @@
 
 ActiveRecord::Schema.define(version: 20190206220211) do
 
+
   create_table "channels", force: :cascade do |t|
     t.text     "channel_name"
     t.text     "channel_description"
     t.text     "channel_guidelines"
-    t.integer  "moderators"
+    t.string   "moderators"
     t.text     "postid"
-    t.datetime "created_at",          null: false
-    t.datetime "updated_at",          null: false
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+    t.string   "channel_image_id"
+    t.string   "channel_image_filename"
+    t.string   "channel_image_size"
+    t.string   "channel_image_type"
   end
 
   create_table "comments", force: :cascade do |t|
@@ -62,13 +67,17 @@ ActiveRecord::Schema.define(version: 20190206220211) do
     t.integer  "votes"
     t.integer  "user_id"
     t.integer  "channel_id"
-    t.datetime "created_at",                     null: false
-    t.datetime "updated_at",                     null: false
+    t.datetime "created_at",                         null: false
+    t.datetime "updated_at",                         null: false
     t.string   "link"
-    t.integer  "cached_votes_total", default: 0
-    t.integer  "cached_votes_score", default: 0
-    t.integer  "cached_votes_up",    default: 0
-    t.integer  "cached_votes_down",  default: 0
+    t.integer  "cached_votes_total",     default: 0
+    t.integer  "cached_votes_score",     default: 0
+    t.integer  "cached_votes_up",        default: 0
+    t.integer  "cached_votes_down",      default: 0
+    t.string   "media_content_id"
+    t.string   "media_content_filename"
+    t.string   "media_content_size"
+    t.string   "media_content_type"
   end
 
   add_index "posts", ["cached_votes_down"], name: "index_posts_on_cached_votes_down"
@@ -84,6 +93,7 @@ ActiveRecord::Schema.define(version: 20190206220211) do
     t.string   "password_digest"
     t.string   "username"
     t.boolean  "admin",           default: false
+    t.string   "subscriptions"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
