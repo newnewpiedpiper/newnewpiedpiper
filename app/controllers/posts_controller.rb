@@ -6,10 +6,10 @@ class PostsController < ApplicationController
         if current_user.nil?
             @posts = Post.all
             # @posts = Post.order('created_at DESC')
-            @posts=Post.order('cast(created_at as date) desc, cached_votes_up desc')
+            @posts=Post.order('cast(created_at as date) asc, cached_votes_score desc')
         else
             @posts = Post.where(channel_id: current_user.subscriptions)
-            @posts=Post.order('cast(created_at as date) desc, cached_votes_up desc')
+            @posts=Post.order('cast(created_at as date) asc, cached_votes_score desc')
         end
     end
     def new
