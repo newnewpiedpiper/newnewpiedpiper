@@ -1,7 +1,7 @@
 <div class="post_page">
 <div class="main_post_content">
 <div class="main_post_item">
-<%= link_to 'Back', :back %>
+<%= link_to 'Back to Home', root_path %>
 <span class="edit">
 <% if !current_user.nil? && check_time_permissions(current_user.id, @post.id) %>
 <%= link_to 'Edit', edit_post_path(@post) %>
