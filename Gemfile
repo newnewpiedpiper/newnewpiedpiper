@@ -54,7 +54,7 @@ gem 'responders'
 # Deploy with Capistrano
 # gem 'capistrano'
 
-gem 'sunspot_rails'
-gem 'sunspot_solr'
+# gem 'sunspot_rails'
+# gem 'sunspot_solr'
 gem "refile", require: "refile/rails"
 gem "refile-mini_magick"

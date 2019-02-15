@@ -3,7 +3,7 @@
 <% end %>
 <div class="channel_info">
 <h1 style="display: inline-block;">#<%= @channel.channel_name %></h1>
-<%= render 'channels/subscribe', :@channel => @channel %>
+<div id="subscription_button"><%= render 'channels/subscribe', :@channel => @channel %></div>
 <h4>Channel Description</h4>
 <h5><%= @channel.channel_description %></h5>
 <h4>Channel Rules</h4>
