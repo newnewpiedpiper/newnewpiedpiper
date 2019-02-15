@@ -1,28 +1,10 @@
-
-<div class="masonry">
- <div class="post_item">
-  <h2><%= Viewchannelinfo.first[:channel_name]%></h2> </a>
-  <h4><%= Viewchannelinfo.first[:channel_description]%></h4>
-  <%
-  postJson = Viewchannelpost.all.as_json
-  postArray = postJson
-  %>
-  
-  <% # yes this means that each channel can show up to only 5 posts at the moment%>
-  <%= if (postArray[0] != nil)
-   render partial: "posts/showPost", locals: {post_id: postArray[0]["postid"]}
-  end%>
-  <%= if (postArray[1] != nil)
-   render partial: "posts/showPost", locals: {post_id: postArray[1]["postid"]}
-  end%>
-  <%= if (postArray[2] != nil)
-   render partial: "posts/showPost", locals: {post_id: postArray[2]["postid"]}
-  end%>
-  <%= if (postArray[3] != nil)
-   render partial: "posts/showPost", locals: {post_id: postArray[3]["postid"]}
-  end%>
-  <%= if (postArray[4] != nil)
-   render partial: "posts/showPost", locals: {post_id: postArray[4]["postid"]}
-  end%>
- </div>
+<% Channel.all.each do |channel| %>
+<a href="<%= channel_path(channel.id)%>">
+<div class="post_item masonry-brick">
+<% if(!channel.channel_image.nil?) %>
+<%= image_tag attachment_url(channel, :channel_image, format: "jpg"), :class => "channel_image_tiny" %>
+<% end %>
+<h2 style="display: inline-block;"><%= channel.channel_name %></h2>
 </div>
+</a>
+<% end %>

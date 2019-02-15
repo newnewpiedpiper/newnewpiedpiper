@@ -1,5 +1,5 @@
 class ChannelsController < ApplicationController
-    respond_to do |format|
+     respond_to do |format|
       format.js {render layout: false} # Add this line to you respond_to block
     end
     def new
@@ -9,6 +9,12 @@ class ChannelsController < ApplicationController
       @channel = Channel.new(channel_params)
       if @channel.save
        flash[:notice] = "Channel was successfully created"
+       if !current_user.nil?
+        user= User.find(current_user.id)
+        sub_nums= user.subscriptions + @channel.id.to_s + ","
+        user.subscriptions=sub_nums
+        user.save!
+       end
        redirect_to channel_path(@channel)
       else
        render 'new'
@@ -23,12 +29,13 @@ class ChannelsController < ApplicationController
         else
             @channel = Channel.find(params[:id])
             user= User.find(current_user.id)
-            sub_nums= user.subscriptions + @channel.id.to_s + ", "
+            sub_nums= user.subscriptions + @channel.id.to_s + ","
             user.subscriptions=sub_nums
             user.save!
+            redirect_to channel_path(@channel)
         end
         
-        render :template => "channels/subscribe"
+        
     end
     def unsubscribe
         if current_user.nil?
@@ -37,12 +44,12 @@ class ChannelsController < ApplicationController
             @channel = Channel.find(params[:id])
             user= User.find(current_user.id)
             sub_nums= user.subscriptions
-            sub_nums.remove(", "+@channel.id.to_s + ",")
-            user.subscriptions=sub_nums
+            user.subscriptions=sub_nums.remove(@channel.id.to_s + ",")
             user.save!
+             redirect_to channel_path(@channel)
         end
         
-        render :template => "channels/subscribe"
+        
     end
   
   
@@ -50,7 +57,7 @@ class ChannelsController < ApplicationController
   
   private
   def channel_params
-    params.require(:channel).permit(:channel_name, :channel_description, :channel_guidelines, :channel_image)
+    params.require(:channel).permit(:channel_name, :channel_description, :channel_guidelines, :channel_image, :moderators)
   end
     
 end

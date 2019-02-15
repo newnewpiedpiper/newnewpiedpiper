@@ -1,8 +1,8 @@
 class Post < ActiveRecord::Base
   attachment :media_content
-  searchable do 
-    text :title, :content
-  end 
+  # searchable do 
+  #   text :title, :content
+  # end 
 
   validates :title, length: { minimum: 2 }
   validates :title, length: { maximum: 200 }
