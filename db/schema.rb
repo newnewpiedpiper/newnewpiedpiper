@@ -11,8 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190206220211) do
-
+ActiveRecord::Schema.define(version: 20190207215013) do
 
   create_table "channels", force: :cascade do |t|
     t.text     "channel_name"
