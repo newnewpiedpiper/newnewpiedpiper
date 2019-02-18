@@ -2,7 +2,7 @@ class FavoritesController < ApplicationController
   before_action :set_post
   
   def create
-    # @post=Post.find(params[:post_id])
+    @post=Post.find(params[:post_id])
     if Favorite.create(favorited: @post, user: current_user)
       redirect_to @post, notice: 'Post has been favorited'
       #@favorites = @create.favorites
