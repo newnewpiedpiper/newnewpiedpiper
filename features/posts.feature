@@ -11,6 +11,9 @@ Background: posts in database
   | 'Doggo'   | 'Dogs are the best animal'   |  1        | 1           | https://static.scientificamerican.com/sciam/cache/file/D059BC4A-CCF3-4495-849ABBAFAED10456_source.jpg?w=590&h=800&526ED1E1-34FF-4472-B348B8B4769AB2A1'|
   | 'Puppies' | 'Puppies are so small!       |  1        | 1           |                                                                                                                                                       |
   
+  Given the following channels exist:
+  | channel_name    | channel_description                     |  moderators   |
+  | "memes"         | "great memes"                           | "1,2"         |
 
   Given the following users exist:
   | name                    | email                     | username          | password        | password_confirmation   |                                                                                                                              
@@ -59,6 +62,7 @@ Scenario: comment on a post
   And I press "Add Comment"
   Then I should see "Cool post!"
   
+  
 Scenario: delete a comment of a post
   Given I am viewing post with id 1
   When I fill in "comment_input" with "Cool post!"
@@ -71,15 +75,27 @@ Scenario: view creator of a post
   Given I am viewing post with id 1
   Then I should see "vin_diesel"
   When I follow "vin_diesel"
-  Then I should see "Username"
+  Then I should see "vin_diesel"
 
 Scenario: view upvotes
   Given I am viewing post with id 1
   Then I should see "▲ 0 ▼"
- 
-@javascript  
-Scenario: upvote
+
+Scenario: view channel
   Given I am viewing post with id 1
-  And I follow "▲"
-  And I wait for ajax
-  Then I should see "1"
+  Then I should see "memes"
+  When I follow "memes"
+  Then I should see "memes"
+Scenario: deleting a post
+  Given I am at the home page
+  When I follow "Create new post" with id "#create_post" from the sidebar
+  # Then I should see "Dog"
+  And I fill in "Title" with "Dog"
+  And I fill in "Content" with "dogs.com"
+  And I press "Create Post"
+  Then I should see "Edit"
+  When I follow "Edit"
+  Then I should see "Delete"
+  When I follow "Delete"
+  Then I should be on the home page
+  And I should not see "dogs.com"

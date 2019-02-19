@@ -3,7 +3,7 @@ class PostsController < ApplicationController
       format.js {render layout: false} # Add this line to you respond_to block
     end
     def index
-        if current_user.nil?
+        if current_user.nil? || current_user.subscriptions.nil?
             @posts = Post.all
             # @posts = Post.order('created_at DESC')
             @posts=Post.order('cast(created_at as date) asc, cached_votes_score desc')

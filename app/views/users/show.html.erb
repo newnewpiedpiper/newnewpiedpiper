@@ -22,8 +22,13 @@
       </div>
       <div class=subscription_stats>
         <h4>Subscriptions</h4>
-        <% subs=@user.subscriptions.split(',') %>
+        <% if !@user.subscriptions.nil?  %>
+        <% subs=@user.subscriptions.split(',')  %>
         <h3><%= subs.length %></h3>
+        <% else %>
+        <h3>0</h3>
+        <% end %>
+        
       </div>
     </div>
     </div>

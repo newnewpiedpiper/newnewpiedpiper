@@ -12,6 +12,13 @@ Given(/^the following users exist:$/) do |table|
   end
 end
 
+Given(/^the following channels exist:$/) do |table|
+  # table is a Cucumber::MultilineArgument::DataTable
+  table.hashes.each do |channel|
+      Channel.create!(channel)
+  end
+end
+
 Then(/^I should see all posts$/) do
   # Make sure that all the posts in the app are visible in the table
   expect(page).to have_xpath("//tr", count: 5)
