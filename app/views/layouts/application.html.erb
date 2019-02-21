@@ -61,8 +61,8 @@
   <hr>
   <%= link_to "Home", root_path %><br>
   <%= link_to "Profile", current_user %><br>
-  <%= link_to "My Favorites", favorites_path %><br>
-  <%= link_to "Settings", edit_user_path(current_user) %><br>
+  <%= link_to "My Favorites", favorites_path, id: "favorites" %><br>
+  <%= link_to "Settings", edit_user_path(current_user), id: "settings" %><br>
   <hr>
   <%= link_to "Create new post", new_post_path, id: "create_post" %><br>
   <%= link_to "Create new channel", new_channel_path, id: "create_channel" %><br>
@@ -74,7 +74,7 @@
     
     
      
-   <%= link_to "Log Out", logout_path, method: :delete, id: "Log Out" %><br>
+   <%= link_to "Log Out", logout_path, method: :delete, id: "log_out" %><br>
     
   <% else %>
    
