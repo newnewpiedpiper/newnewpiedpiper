@@ -66,14 +66,4 @@ module ApplicationHelper
         rescue ActiveRecord::RecordNotFound
             return ""
     end
-    def class_finder(id)
-         @post = Post.find(id)
-        if(@post.link != "")
-            return "popular"
-        else
-            return "new"
-        end
-        rescue ActiveRecord::RecordNotFound
-            return "new"
-    end
 end

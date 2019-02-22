@@ -10,6 +10,20 @@ require 'rails_helper'
 #     end
 #   end
 # end
+
 RSpec.describe ChannelsHelper, type: :helper do
-  pending "add some examples to (or delete) #{__FILE__}"
+  describe "#check_subcription" do
+    it "works" do
+        #user is nil
+        expect(helper.check_subcription(1)).to eq false
+        #user is subscribed
+        helper.stub(:current_user) { User.create(:name => "Amanda Easter", :email => "me@amandaeaster.com", :username => "amandapanda", :password => "testpassword", :password_confirmation => "testpassword", :subscriptions =>  "1,2",admin:false) }
+        expect(helper.check_subcription(1)).to eq true
+        #user isn't subscribed
+         expect(helper.check_subcription(-1)).to eq false
+        #user subs is nil
+        helper.stub(:current_user) { User.create(:name => "Amanda Easter", :email => "me@amandaeaster.com", :username => "amandapanda", :password => "testpassword", :password_confirmation => "testpassword", admin:false) }
+        expect(helper.check_subcription(1)).to eq false
+    end
+  end
 end

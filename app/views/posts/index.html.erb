@@ -1,7 +1,7 @@
 
 <div class="masonry">
  <% @posts.each do |post| %>
- <div class="post_item masonry-brick <%= class_finder(post.id) %>">
+ <div class="post_item masonry-brick">
   <a href="<%= user_path(get_username(post.user_id))%>">@<%= get_username(post.user_id)%></a><br>
   <a href="<%= channel_path(@post.channel_id)%>">#<%= get_channel_name(@post.channel_id) %></a>
  <a href=<%= post_path(post) %>>
