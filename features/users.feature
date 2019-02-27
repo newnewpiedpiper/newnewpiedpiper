@@ -53,7 +53,7 @@ Scenario: login to existing account
   And I fill in "Password confirmation" with "password"
   And I click the "Create my account" button
   And I should see "test_username"
-  When I follow "Log Out" with id "#log_out" from the sidebar
+  When I follow "Log Out" with id "#log_out_s" from the sidebar
   When I follow "Log In"
   And I fill in "Email" with "sample1@gmail.com"
   And I fill in "Password" with "password"
