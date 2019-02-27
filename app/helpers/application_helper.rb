@@ -1,6 +1,5 @@
 module ApplicationHelper
     def log_in(user)
-    puts "initial"
     session[:user_id] = user.id
     end
     def log_out
@@ -16,7 +15,7 @@ module ApplicationHelper
     end
     # Returns true if the user is logged in, false otherwise.
     def logged_in?
-        puts "login"
+        
         !current_user.nil?
     end
     def get_username(userid)
@@ -48,10 +47,8 @@ module ApplicationHelper
             created= Post.find(post_id).created_at
             a= current-created
             difference=a / 60
-            puts "Difference"
-            puts difference
             if(difference<5)
-                puts difference
+                
                 return true
             else
                 return false
@@ -68,15 +65,5 @@ module ApplicationHelper
         return @channel.channel_name
         rescue ActiveRecord::RecordNotFound
             return ""
-    end
-    def class_finder(id)
-         @post = Post.find(id)
-        if(@post.link != "")
-            return "popular"
-        else
-            return "new"
-        end
-        rescue ActiveRecord::RecordNotFound
-            return "new"
     end
 end

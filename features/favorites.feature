@@ -1,8 +1,8 @@
-Feature: create and view posts
+Feature: favorite posts
 
   As a user
-  So that I can make posts I am interested in
-  I want to create and view posts
+  So I can find a post again
+  I can favorite posts
 
 Background: posts in database
 
@@ -32,70 +32,23 @@ Background: posts in database
   And I fill in "Password confirmation" with "password"
   And I click the "Create my account" button
   Then I should see "test_username"
+
+Scenario: favorite a post
+  Given I am viewing post with id 1
+  When I follow "Add to favorites"
+  Then I should see "Remove from favorites"
   
-Scenario: view a post
-  Given: I am following the dogs channel
-  When I go to the home page
-  Then I should see the post "Doggo"
+Scenario: view my favorites
+  Given I am viewing post with id 1
+  When I follow "Add to favorites"
+  And I go to the favorites page
+  Then I should see "Doggo"
 
-Scenario: create a post
-  Given I am at the home page
-  When I follow "Create new post" with id "#create_post" from the sidebar
-  # Then I should see "Dog"
-  And I fill in "Title" with "Dog"
-  And I fill in "Content" with "dogs.com"
-  And I press "Create Post"
-  Then I should see the post "Dog"
-
-Scenario: edit a post
+Scenario: removing favorites
   Given I am viewing post with id 1
-  #And I am the creator of the "Doggo" post
-  And the post with id 1 was created less than 5 minutes ago
-  When I follow "Edit"
-  And I fill in "Title" with "Brown Doggo"
-  And I press "Update Post"
-  Then I should see "Brown Doggo"
-
-Scenario: comment on a post
-  Given I am viewing post with id 1
-  When I fill in "comment_input" with "Cool post!"
-  And I press "Add Comment"
-  Then I should see "Cool post!"
-  
-  
-Scenario: delete a comment of a post
-  Given I am viewing post with id 1
-  When I fill in "comment_input" with "Cool post!"
-  And I press "Add Comment"
-  Then I should see "Cool post!"
-  When I follow "Delete"
-  Then I should not see "Cool post!"
-  
-Scenario: view creator of a post
-  Given I am viewing post with id 1
-  Then I should see "vin_diesel"
-  When I follow "vin_diesel"
-  Then I should see "vin_diesel"
-
-Scenario: view upvotes
-  Given I am viewing post with id 1
-  Then I should see "▲ 0 ▼"
-
-Scenario: view channel
-  Given I am viewing post with id 1
-  Then I should see "memes"
-  When I follow "memes"
-  Then I should see "memes"
-Scenario: deleting a post
-  Given I am at the home page
-  When I follow "Create new post" with id "#create_post" from the sidebar
-  # Then I should see "Dog"
-  And I fill in "Title" with "Dog"
-  And I fill in "Content" with "dogs.com"
-  And I press "Create Post"
-  Then I should see "Edit"
-  When I follow "Edit"
-  Then I should see "Delete"
-  When I follow "Delete"
-  Then I should be on the home page
-  And I should not see "dogs.com"
+  When I follow "Add to favorites"
+  And I go to the favorites page
+  And I follow "Doggo"
+  And I follow "Remove from favorites"
+  When I go to the favorites page
+  Then I should not see "Doggo"

@@ -1,9 +1,9 @@
 <div class="comment" id="comment-<%= comment.id %>">
   <a href="<%= user_path(get_username(comment.user_id))%>">@<%= get_username(comment.user_id)%></a><br>
   <%= comment.body %><br>
-  <small><%= time_ago_in_words(comment.created_at) %> ago</small><br>
-  <span class="reply_prompt" id="reply_prompt_<%= comment.id %>" onclick="showReply(<%= comment.id %>)">Reply</span>
+  <small><%= time_ago_in_words(comment.created_at) %> ago</small>
   <% if logged_in? %>
+  <span class="reply_prompt" id="reply_prompt_<%= comment.id %>" onclick="showReply(<%= comment.id %>)">Reply</span>
   <div class="reply" id="comment_reply_<%= comment.id %>">
   <%= form_for [comment, Comment.new] do |f| %>
       <%= f.text_area :body, placeholder: "Add a Reply" %><br/>
