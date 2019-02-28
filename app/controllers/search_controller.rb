@@ -3,11 +3,8 @@ class SearchController < ApplicationController
       if params[:search].blank?  
         redirect_to(root_path, alert: "Empty field!") and return  
       else 
-        @search = Post.search do
-          fulltext params[:search]
-        end
-        #@results = Post.all.where("title = ?", @parameter)
-        @results = @search.results
+        @results = Post.where('title LIKE ?', "%#{params[:search]}%")
+        @channel_results= Channel.where('channel_name LIKE ?', "%#{params[:search]}%")
       end  
   end
 end
