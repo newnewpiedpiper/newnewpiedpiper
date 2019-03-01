@@ -38,11 +38,11 @@ end
 users = [
 
 
-    { :name => "Vinayak Chetlapalli", :email => "vinayakc@tamu.edu", :username => "vin_diesel", :password => "laptop07", :password_confirmation =>  "laptop07", :subscriptions =>  "1,2",admin:false}, 
-    { :name => "Annie Blakeslee", :email => "annieblakeslee@tamu.edu", :username => "any", :password => "testpassword", :password_confirmation => "testpassword", :subscriptions =>  "1,2",admin:false},
-    { :name => "Amanda Easter", :email => "me@amandaeaster.com", :username => "amandapanda", :password => "testpassword", :password_confirmation => "testpassword", :subscriptions =>  "1,2",admin:false},
-    { :name => "Reed Hampton", :email => "reedbhampton@gmail.com", :username => "iliketoreed", :password => "testpassword", :password_confirmation => "testpassword", :subscriptions =>  "1,2",admin:false},
-    { :name => "Omar Santos", :email => "omars98@tamu.edu", :username => "god_is_an_omar", :password => "testpassword", :password_confirmation => "testpassword", :subscriptions =>  "1,2",admin:false},
+    { :name => "Vinayak Chetlapalli", :email => "vinayakc@tamu.edu", :username => "vin_diesel", :password => "laptop07", :password_confirmation =>  "laptop07", :subscriptions =>  "1,2,",admin:false}, 
+    { :name => "Annie Blakeslee", :email => "annieblakeslee@tamu.edu", :username => "any", :password => "testpassword", :password_confirmation => "testpassword", :subscriptions =>  "1,2,",admin:false},
+    { :name => "Amanda Easter", :email => "me@amandaeaster.com", :username => "amandapanda", :password => "testpassword", :password_confirmation => "testpassword", :subscriptions =>  "1,2,",admin:false},
+    { :name => "Reed Hampton", :email => "reedbhampton@gmail.com", :username => "iliketoreed", :password => "testpassword", :password_confirmation => "testpassword", :subscriptions =>  "1,2,",admin:false},
+    { :name => "Omar Santos", :email => "omars98@tamu.edu", :username => "god_is_an_omar", :password => "testpassword", :password_confirmation => "testpassword", :subscriptions =>  "1,2,",admin:false},
 
 ]
 
