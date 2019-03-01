@@ -10,9 +10,10 @@
 <% end %>
 <%- unless current_user.nil? || current_user.favorites.exists?(favorited_id: @post.id) -%>
   <%= link_to 'Add to favorites', favorites_path(post_id: @post), method: :post %>
-  <%- else -%>
+  <%- else if !current_user.nil? -%>
   <%= link_to 'Remove from favorites', favorite_path(@post), method: :delete %> 
-  <%- end -%>
+  <% else %>
+  <%- end -%><%- end -%>
 </span>
 <br>
 <a href="<%= user_path(get_username(@post.user_id))%>">@<%= get_username(@post.user_id)%></a>
