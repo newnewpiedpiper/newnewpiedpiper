@@ -7,10 +7,10 @@ class PostsController < ApplicationController
             @posts = Post.all
             
             # @posts = Post.order('created_at DESC')
-            @posts=Post.order('cast(created_at as date) desc, cached_votes_score desc')
+            @posts=Post.order('cached_votes_score desc, cast(created_at as date) desc')
         else
             subs=current_user.subscriptions.split(',')
-            @posts = Post.where(channel_id: subs).order('cast(created_at as date) desc, cached_votes_score desc')
+            @posts = Post.where(channel_id: subs).order('cached_votes_score desc, cast(created_at as date) desc')
         end
 
     end
