@@ -677,6 +677,7 @@
         2,
         2,
         null,
+        null,
         2,
         null,
         0,
@@ -756,9 +757,6 @@
         0,
         null,
         0,
-        0,
-        null,
-        null,
         0,
         null,
         null,
@@ -1232,7 +1230,7 @@
         null
       ]
     },
-    "timestamp": 1550857242
+    "timestamp": 1551393067
   },
   "Cucumber Features": {
     "coverage": {
@@ -1429,6 +1427,7 @@
         1,
         19,
         19,
+        null,
         null,
         19,
         null,
@@ -1797,12 +1796,6 @@
         null,
         null
       ],
-      "/home/ubuntu/Ruby/newnewpiedpiper/app/controllers/home_controller.rb": [
-        0,
-        0,
-        0,
-        0
-      ],
       "/home/ubuntu/Ruby/newnewpiedpiper/app/controllers/search_controller.rb": [
         0,
         0,
@@ -1810,9 +1803,6 @@
         0,
         0,
         0,
-        0,
-        0,
-        null,
         0,
         0,
         0,
@@ -1864,13 +1854,8 @@
         0,
         0,
         0
-      ],
-      "/home/ubuntu/Ruby/newnewpiedpiper/app/controllers/link_controller.rb": [
-        0,
-        null,
-        0
       ]
     },
-    "timestamp": 1550856053
+    "timestamp": 1551393034
   }
 }
