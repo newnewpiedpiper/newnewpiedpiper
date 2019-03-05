@@ -9,4 +9,7 @@
       <a href="http://gravatar.com/emails" target="_blank">Change</a>
     </div>
   </div>
+  <div>
+    <%= link_to 'Delete', @user, :method => :delete, :data => {:confirm => 'Are you sure?'} %><br>
+  </div>
 </div>
