@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/home/ubuntu/Ruby/newnewpiedpiper/spec/controllers/channels_controller_spec.rb": [
+      "/home/ec2-user/environment/newnewpiedpiper/spec/controllers/channels_controller_spec.rb": [
         1,
         null,
         1,
@@ -62,7 +62,7 @@
         null,
         null
       ],
-      "/home/ubuntu/Ruby/newnewpiedpiper/spec/rails_helper.rb": [
+      "/home/ec2-user/environment/newnewpiedpiper/spec/rails_helper.rb": [
         null,
         1,
         1,
@@ -121,14 +121,14 @@
         null,
         null
       ],
-      "/home/ubuntu/Ruby/newnewpiedpiper/config/environment.rb": [
+      "/home/ec2-user/environment/newnewpiedpiper/config/environment.rb": [
         null,
         1,
         null,
         null,
         1
       ],
-      "/home/ubuntu/Ruby/newnewpiedpiper/config/application.rb": [
+      "/home/ec2-user/environment/newnewpiedpiper/config/application.rb": [
         1,
         null,
         1,
@@ -160,12 +160,12 @@
         null,
         null
       ],
-      "/home/ubuntu/Ruby/newnewpiedpiper/config/boot.rb": [
+      "/home/ec2-user/environment/newnewpiedpiper/config/boot.rb": [
         1,
         null,
         1
       ],
-      "/home/ubuntu/Ruby/newnewpiedpiper/config/environments/test.rb": [
+      "/home/ec2-user/environment/newnewpiedpiper/config/environments/test.rb": [
         1,
         null,
         null,
@@ -209,7 +209,7 @@
         null,
         null
       ],
-      "/home/ubuntu/Ruby/newnewpiedpiper/config/initializers/assets.rb": [
+      "/home/ec2-user/environment/newnewpiedpiper/config/initializers/assets.rb": [
         null,
         null,
         null,
@@ -222,7 +222,7 @@
         null,
         null
       ],
-      "/home/ubuntu/Ruby/newnewpiedpiper/config/initializers/backtrace_silencers.rb": [
+      "/home/ec2-user/environment/newnewpiedpiper/config/initializers/backtrace_silencers.rb": [
         null,
         null,
         null,
@@ -231,173 +231,18 @@
         null,
         null
       ],
-      "/home/ubuntu/Ruby/newnewpiedpiper/config/initializers/cookies_serializer.rb": [
+      "/home/ec2-user/environment/newnewpiedpiper/config/initializers/cookies_serializer.rb": [
         null,
         null,
         1
       ],
-      "/home/ubuntu/Ruby/newnewpiedpiper/config/initializers/filter_parameter_logging.rb": [
-        null,
-        null,
-        null,
-        1
-      ],
-      "/home/ubuntu/Ruby/newnewpiedpiper/config/initializers/inflections.rb": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      "/home/ubuntu/Ruby/newnewpiedpiper/config/initializers/mime_types.rb": [
-        null,
-        null,
-        null,
-        null
-      ],
-      "/home/ubuntu/Ruby/newnewpiedpiper/config/initializers/session_store.rb": [
-        null,
-        null,
-        1
-      ],
-      "/home/ubuntu/Ruby/newnewpiedpiper/config/initializers/to_time_preserves_timezone.rb": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
+      "/home/ec2-user/environment/newnewpiedpiper/config/initializers/filter_parameter_logging.rb": [
         null,
         null,
         null,
         1
       ],
-      "/home/ubuntu/Ruby/newnewpiedpiper/config/initializers/wrap_parameters.rb": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        1,
-        1,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      "/home/ubuntu/Ruby/newnewpiedpiper/config/routes.rb": [
-        1,
-        null,
-        1,
-        null,
-        1,
-        null,
-        null,
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        1,
-        1,
-        1,
-        null,
-        1,
-        null,
-        1,
-        1,
-        1,
-        null,
-        1,
-        1,
-        null,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
+      "/home/ec2-user/environment/newnewpiedpiper/config/initializers/inflections.rb": [
         null,
         null,
         null,
@@ -415,7 +260,162 @@
         null,
         null
       ],
-      "/home/ubuntu/Ruby/newnewpiedpiper/app/helpers/application_helper.rb": [
+      "/home/ec2-user/environment/newnewpiedpiper/config/initializers/mime_types.rb": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "/home/ec2-user/environment/newnewpiedpiper/config/initializers/session_store.rb": [
+        null,
+        null,
+        1
+      ],
+      "/home/ec2-user/environment/newnewpiedpiper/config/initializers/to_time_preserves_timezone.rb": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1
+      ],
+      "/home/ec2-user/environment/newnewpiedpiper/config/initializers/wrap_parameters.rb": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/home/ec2-user/environment/newnewpiedpiper/config/routes.rb": [
+        1,
+        null,
+        1,
+        null,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/home/ec2-user/environment/newnewpiedpiper/app/helpers/application_helper.rb": [
         1,
         1,
         0,
@@ -486,7 +486,7 @@
         null,
         null
       ],
-      "/home/ubuntu/Ruby/newnewpiedpiper/app/helpers/channels_helper.rb": [
+      "/home/ec2-user/environment/newnewpiedpiper/app/helpers/channels_helper.rb": [
         1,
         1,
         4,
@@ -501,27 +501,27 @@
         null,
         null
       ],
-      "/home/ubuntu/Ruby/newnewpiedpiper/app/helpers/home_helper.rb": [
+      "/home/ec2-user/environment/newnewpiedpiper/app/helpers/home_helper.rb": [
         1,
         null
       ],
-      "/home/ubuntu/Ruby/newnewpiedpiper/app/helpers/posts_helper.rb": [
+      "/home/ec2-user/environment/newnewpiedpiper/app/helpers/posts_helper.rb": [
         1,
         null
       ],
-      "/home/ubuntu/Ruby/newnewpiedpiper/app/helpers/search_helper.rb": [
+      "/home/ec2-user/environment/newnewpiedpiper/app/helpers/search_helper.rb": [
         1,
         null
       ],
-      "/home/ubuntu/Ruby/newnewpiedpiper/app/helpers/sessions_helper.rb": [
+      "/home/ec2-user/environment/newnewpiedpiper/app/helpers/sessions_helper.rb": [
         1,
         null
       ],
-      "/home/ubuntu/Ruby/newnewpiedpiper/app/helpers/upvotes_helper.rb": [
+      "/home/ec2-user/environment/newnewpiedpiper/app/helpers/upvotes_helper.rb": [
         1,
         null
       ],
-      "/home/ubuntu/Ruby/newnewpiedpiper/app/helpers/users_helper.rb": [
+      "/home/ec2-user/environment/newnewpiedpiper/app/helpers/users_helper.rb": [
         1,
         null,
         null,
@@ -532,11 +532,11 @@
         null,
         null
       ],
-      "/home/ubuntu/Ruby/newnewpiedpiper/app/helpers/viewchannel_helper.rb": [
+      "/home/ec2-user/environment/newnewpiedpiper/app/helpers/viewchannel_helper.rb": [
         1,
         null
       ],
-      "/home/ubuntu/Ruby/newnewpiedpiper/app/controllers/channels_controller.rb": [
+      "/home/ec2-user/environment/newnewpiedpiper/app/controllers/channels_controller.rb": [
         1,
         1,
         0,
@@ -601,7 +601,7 @@
         null,
         null
       ],
-      "/home/ubuntu/Ruby/newnewpiedpiper/app/controllers/application_controller.rb": [
+      "/home/ec2-user/environment/newnewpiedpiper/app/controllers/application_controller.rb": [
         1,
         null,
         null,
@@ -611,7 +611,7 @@
         null,
         null
       ],
-      "/home/ubuntu/Ruby/newnewpiedpiper/spec/controllers/posts_controller_spec.rb": [
+      "/home/ec2-user/environment/newnewpiedpiper/spec/controllers/posts_controller_spec.rb": [
         1,
         null,
         1,
@@ -668,7 +668,7 @@
         null,
         null
       ],
-      "/home/ubuntu/Ruby/newnewpiedpiper/app/controllers/posts_controller.rb": [
+      "/home/ec2-user/environment/newnewpiedpiper/app/controllers/posts_controller.rb": [
         1,
         1,
         0,
@@ -743,14 +743,14 @@
         null,
         null
       ],
-      "/home/ubuntu/Ruby/newnewpiedpiper/spec/controllers/search_controller_spec.rb": [
+      "/home/ec2-user/environment/newnewpiedpiper/spec/controllers/search_controller_spec.rb": [
         1,
         null,
         1,
         null,
         null
       ],
-      "/home/ubuntu/Ruby/newnewpiedpiper/app/controllers/search_controller.rb": [
+      "/home/ec2-user/environment/newnewpiedpiper/app/controllers/search_controller.rb": [
         1,
         1,
         0,
@@ -762,7 +762,7 @@
         null,
         null
       ],
-      "/home/ubuntu/Ruby/newnewpiedpiper/spec/controllers/sessions_controller_spec.rb": [
+      "/home/ec2-user/environment/newnewpiedpiper/spec/controllers/sessions_controller_spec.rb": [
         1,
         null,
         1,
@@ -776,7 +776,7 @@
         null,
         null
       ],
-      "/home/ubuntu/Ruby/newnewpiedpiper/app/controllers/sessions_controller.rb": [
+      "/home/ec2-user/environment/newnewpiedpiper/app/controllers/sessions_controller.rb": [
         1,
         null,
         1,
@@ -799,81 +799,19 @@
         null,
         null,
         1,
+        null,
+        null,
+        null,
         0,
         0,
         null,
         null
       ],
-      "/home/ubuntu/Ruby/newnewpiedpiper/spec/controllers/upvotes_controller_spec.rb": [
+      "/home/ec2-user/environment/newnewpiedpiper/spec/controllers/upvotes_controller_spec.rb": [
         1,
         null,
         1,
         1,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      "/home/ubuntu/Ruby/newnewpiedpiper/app/controllers/upvotes_controller.rb": [
-        1,
-        1,
-        1,
-        1,
-        null,
-        0,
-        null,
-        null,
-        1,
-        0,
-        0,
-        0,
-        0,
-        null,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        null,
-        null,
-        null,
-        null,
-        null,
-        1,
-        0,
-        null,
-        1,
-        0,
-        0,
-        null,
-        0,
-        null,
-        0,
-        null,
-        1,
-        1,
-        0,
-        null,
-        1,
-        1,
-        0,
-        null,
-        null
-      ],
-      "/home/ubuntu/Ruby/newnewpiedpiper/spec/controllers/users_controller_spec.rb": [
-        1,
-        null,
-        1,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
         null,
         null,
         null,
@@ -882,7 +820,72 @@
         null,
         null
       ],
-      "/home/ubuntu/Ruby/newnewpiedpiper/spec/helpers/application_helper_spec.rb": [
+      "/home/ec2-user/environment/newnewpiedpiper/app/controllers/upvotes_controller.rb": [
+        1,
+        1,
+        1,
+        1,
+        null,
+        0,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        0,
+        null,
+        1,
+        0,
+        0,
+        null,
+        0,
+        null,
+        0,
+        null,
+        1,
+        1,
+        0,
+        null,
+        1,
+        1,
+        0,
+        null,
+        null
+      ],
+      "/home/ec2-user/environment/newnewpiedpiper/spec/controllers/users_controller_spec.rb": [
+        1,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/home/ec2-user/environment/newnewpiedpiper/spec/helpers/application_helper_spec.rb": [
         1,
         null,
         null,
@@ -954,7 +957,7 @@
         null,
         null
       ],
-      "/home/ubuntu/Ruby/newnewpiedpiper/spec/helpers/channels_helper_spec.rb": [
+      "/home/ec2-user/environment/newnewpiedpiper/spec/helpers/channels_helper_spec.rb": [
         1,
         null,
         null,
@@ -985,7 +988,7 @@
         null,
         null
       ],
-      "/home/ubuntu/Ruby/newnewpiedpiper/spec/helpers/search_helper_spec.rb": [
+      "/home/ec2-user/environment/newnewpiedpiper/spec/helpers/search_helper_spec.rb": [
         1,
         null,
         null,
@@ -1002,7 +1005,7 @@
         1,
         null
       ],
-      "/home/ubuntu/Ruby/newnewpiedpiper/spec/helpers/sessions_helper_spec.rb": [
+      "/home/ec2-user/environment/newnewpiedpiper/spec/helpers/sessions_helper_spec.rb": [
         1,
         null,
         null,
@@ -1019,7 +1022,7 @@
         1,
         null
       ],
-      "/home/ubuntu/Ruby/newnewpiedpiper/spec/helpers/upvotes_helper_spec.rb": [
+      "/home/ec2-user/environment/newnewpiedpiper/spec/helpers/upvotes_helper_spec.rb": [
         1,
         null,
         null,
@@ -1036,7 +1039,7 @@
         1,
         null
       ],
-      "/home/ubuntu/Ruby/newnewpiedpiper/spec/helpers/users_helper_spec.rb": [
+      "/home/ec2-user/environment/newnewpiedpiper/spec/helpers/users_helper_spec.rb": [
         1,
         null,
         null,
@@ -1060,26 +1063,26 @@
         null,
         null
       ],
-      "/home/ubuntu/Ruby/newnewpiedpiper/spec/models/channel_spec.rb": [
+      "/home/ec2-user/environment/newnewpiedpiper/spec/models/channel_spec.rb": [
         1,
         null,
         1,
         1,
         null
       ],
-      "/home/ubuntu/Ruby/newnewpiedpiper/app/models/channel.rb": [
+      "/home/ec2-user/environment/newnewpiedpiper/app/models/channel.rb": [
         1,
         1,
         null
       ],
-      "/home/ubuntu/Ruby/newnewpiedpiper/spec/models/comment_spec.rb": [
+      "/home/ec2-user/environment/newnewpiedpiper/spec/models/comment_spec.rb": [
         1,
         null,
         1,
         1,
         null
       ],
-      "/home/ubuntu/Ruby/newnewpiedpiper/app/models/comment.rb": [
+      "/home/ec2-user/environment/newnewpiedpiper/app/models/comment.rb": [
         1,
         1,
         1,
@@ -1096,27 +1099,27 @@
         null,
         null
       ],
-      "/home/ubuntu/Ruby/newnewpiedpiper/spec/models/favorite_spec.rb": [
+      "/home/ec2-user/environment/newnewpiedpiper/spec/models/favorite_spec.rb": [
         1,
         null,
         1,
         1,
         null
       ],
-      "/home/ubuntu/Ruby/newnewpiedpiper/app/models/favorite.rb": [
+      "/home/ec2-user/environment/newnewpiedpiper/app/models/favorite.rb": [
         1,
         1,
         1,
         null
       ],
-      "/home/ubuntu/Ruby/newnewpiedpiper/spec/models/post_spec.rb": [
+      "/home/ec2-user/environment/newnewpiedpiper/spec/models/post_spec.rb": [
         1,
         null,
         1,
         1,
         null
       ],
-      "/home/ubuntu/Ruby/newnewpiedpiper/app/models/post.rb": [
+      "/home/ec2-user/environment/newnewpiedpiper/app/models/post.rb": [
         1,
         1,
         null,
@@ -1133,14 +1136,14 @@
         null,
         null
       ],
-      "/home/ubuntu/Ruby/newnewpiedpiper/spec/models/user_spec.rb": [
+      "/home/ec2-user/environment/newnewpiedpiper/spec/models/user_spec.rb": [
         1,
         null,
         1,
         1,
         null
       ],
-      "/home/ubuntu/Ruby/newnewpiedpiper/app/models/user.rb": [
+      "/home/ec2-user/environment/newnewpiedpiper/app/models/user.rb": [
         1,
         1,
         1,
@@ -1182,7 +1185,7 @@
         1,
         null
       ],
-      "/home/ubuntu/Ruby/newnewpiedpiper/spec/requests/users_logins_spec.rb": [
+      "/home/ec2-user/environment/newnewpiedpiper/spec/requests/users_logins_spec.rb": [
         1,
         null,
         1,
@@ -1194,35 +1197,35 @@
         null,
         null
       ],
-      "/home/ubuntu/Ruby/newnewpiedpiper/spec/views/home/index.html.erb_spec.rb": [
+      "/home/ec2-user/environment/newnewpiedpiper/spec/views/home/index.html.erb_spec.rb": [
         1,
         null,
         1,
         1,
         null
       ],
-      "/home/ubuntu/Ruby/newnewpiedpiper/spec/views/sessions/new.html.erb_spec.rb": [
+      "/home/ec2-user/environment/newnewpiedpiper/spec/views/sessions/new.html.erb_spec.rb": [
         1,
         null,
         1,
         1,
         null
       ],
-      "/home/ubuntu/Ruby/newnewpiedpiper/spec/views/users/email:string.html.erb_spec.rb": [
+      "/home/ec2-user/environment/newnewpiedpiper/spec/views/users/email:string.html.erb_spec.rb": [
         1,
         null,
         1,
         1,
         null
       ],
-      "/home/ubuntu/Ruby/newnewpiedpiper/spec/views/users/name:string.html.erb_spec.rb": [
+      "/home/ec2-user/environment/newnewpiedpiper/spec/views/users/name:string.html.erb_spec.rb": [
         1,
         null,
         1,
         1,
         null
       ],
-      "/home/ubuntu/Ruby/newnewpiedpiper/spec/views/users/new.html.erb_spec.rb": [
+      "/home/ec2-user/environment/newnewpiedpiper/spec/views/users/new.html.erb_spec.rb": [
         1,
         null,
         1,
@@ -1230,11 +1233,11 @@
         null
       ]
     },
-    "timestamp": 1551475541
+    "timestamp": 1551837579
   },
   "Cucumber Features": {
     "coverage": {
-      "/home/ubuntu/Ruby/newnewpiedpiper/app/helpers/application_helper.rb": [
+      "/home/ec2-user/environment/newnewpiedpiper/app/helpers/application_helper.rb": [
         1,
         1,
         15,
@@ -1244,8 +1247,8 @@
         1,
         null,
         1,
-        688,
-        583,
+        692,
+        587,
         null,
         0,
         0,
@@ -1305,7 +1308,7 @@
         null,
         null
       ],
-      "/home/ubuntu/Ruby/newnewpiedpiper/app/helpers/channels_helper.rb": [
+      "/home/ec2-user/environment/newnewpiedpiper/app/helpers/channels_helper.rb": [
         1,
         1,
         2,
@@ -1320,27 +1323,27 @@
         null,
         null
       ],
-      "/home/ubuntu/Ruby/newnewpiedpiper/app/helpers/home_helper.rb": [
+      "/home/ec2-user/environment/newnewpiedpiper/app/helpers/home_helper.rb": [
         1,
         null
       ],
-      "/home/ubuntu/Ruby/newnewpiedpiper/app/helpers/posts_helper.rb": [
+      "/home/ec2-user/environment/newnewpiedpiper/app/helpers/posts_helper.rb": [
         1,
         null
       ],
-      "/home/ubuntu/Ruby/newnewpiedpiper/app/helpers/search_helper.rb": [
+      "/home/ec2-user/environment/newnewpiedpiper/app/helpers/search_helper.rb": [
         1,
         null
       ],
-      "/home/ubuntu/Ruby/newnewpiedpiper/app/helpers/sessions_helper.rb": [
+      "/home/ec2-user/environment/newnewpiedpiper/app/helpers/sessions_helper.rb": [
         1,
         null
       ],
-      "/home/ubuntu/Ruby/newnewpiedpiper/app/helpers/upvotes_helper.rb": [
+      "/home/ec2-user/environment/newnewpiedpiper/app/helpers/upvotes_helper.rb": [
         1,
         null
       ],
-      "/home/ubuntu/Ruby/newnewpiedpiper/app/helpers/users_helper.rb": [
+      "/home/ec2-user/environment/newnewpiedpiper/app/helpers/users_helper.rb": [
         1,
         null,
         null,
@@ -1351,11 +1354,11 @@
         null,
         null
       ],
-      "/home/ubuntu/Ruby/newnewpiedpiper/app/helpers/viewchannel_helper.rb": [
+      "/home/ec2-user/environment/newnewpiedpiper/app/helpers/viewchannel_helper.rb": [
         1,
         null
       ],
-      "/home/ubuntu/Ruby/newnewpiedpiper/app/models/post.rb": [
+      "/home/ec2-user/environment/newnewpiedpiper/app/models/post.rb": [
         1,
         1,
         null,
@@ -1372,12 +1375,12 @@
         null,
         null
       ],
-      "/home/ubuntu/Ruby/newnewpiedpiper/app/models/channel.rb": [
+      "/home/ec2-user/environment/newnewpiedpiper/app/models/channel.rb": [
         1,
         1,
         null
       ],
-      "/home/ubuntu/Ruby/newnewpiedpiper/app/models/user.rb": [
+      "/home/ec2-user/environment/newnewpiedpiper/app/models/user.rb": [
         1,
         1,
         1,
@@ -1419,7 +1422,7 @@
         1,
         null
       ],
-      "/home/ubuntu/Ruby/newnewpiedpiper/app/controllers/posts_controller.rb": [
+      "/home/ec2-user/environment/newnewpiedpiper/app/controllers/posts_controller.rb": [
         1,
         1,
         0,
@@ -1494,7 +1497,7 @@
         null,
         null
       ],
-      "/home/ubuntu/Ruby/newnewpiedpiper/app/controllers/application_controller.rb": [
+      "/home/ec2-user/environment/newnewpiedpiper/app/controllers/application_controller.rb": [
         1,
         null,
         null,
@@ -1504,7 +1507,7 @@
         null,
         null
       ],
-      "/home/ubuntu/Ruby/newnewpiedpiper/app/models/comment.rb": [
+      "/home/ec2-user/environment/newnewpiedpiper/app/models/comment.rb": [
         1,
         1,
         1,
@@ -1521,11 +1524,11 @@
         null,
         null
       ],
-      "/home/ubuntu/Ruby/newnewpiedpiper/app/controllers/users_controller.rb": [
+      "/home/ec2-user/environment/newnewpiedpiper/app/controllers/users_controller.rb": [
         1,
         null,
         1,
-        1,
+        null,
         null,
         null,
         null,
@@ -1609,13 +1612,13 @@
         null,
         null
       ],
-      "/home/ubuntu/Ruby/newnewpiedpiper/app/models/favorite.rb": [
+      "/home/ec2-user/environment/newnewpiedpiper/app/models/favorite.rb": [
         1,
         1,
         1,
         null
       ],
-      "/home/ubuntu/Ruby/newnewpiedpiper/app/controllers/favorites_controller.rb": [
+      "/home/ec2-user/environment/newnewpiedpiper/app/controllers/favorites_controller.rb": [
         1,
         1,
         null,
@@ -1653,7 +1656,7 @@
         null,
         null
       ],
-      "/home/ubuntu/Ruby/newnewpiedpiper/app/controllers/comments_controller.rb": [
+      "/home/ec2-user/environment/newnewpiedpiper/app/controllers/comments_controller.rb": [
         1,
         1,
         0,
@@ -1703,7 +1706,7 @@
         null,
         null
       ],
-      "/home/ubuntu/Ruby/newnewpiedpiper/app/controllers/channels_controller.rb": [
+      "/home/ec2-user/environment/newnewpiedpiper/app/controllers/channels_controller.rb": [
         1,
         1,
         0,
@@ -1768,7 +1771,7 @@
         null,
         null
       ],
-      "/home/ubuntu/Ruby/newnewpiedpiper/app/controllers/sessions_controller.rb": [
+      "/home/ec2-user/environment/newnewpiedpiper/app/controllers/sessions_controller.rb": [
         1,
         null,
         1,
@@ -1791,12 +1794,15 @@
         null,
         null,
         1,
+        null,
+        null,
+        null,
         1,
         1,
         null,
         null
       ],
-      "/home/ubuntu/Ruby/newnewpiedpiper/app/controllers/search_controller.rb": [
+      "/home/ec2-user/environment/newnewpiedpiper/app/controllers/search_controller.rb": [
         0,
         0,
         0,
@@ -1808,7 +1814,7 @@
         0,
         0
       ],
-      "/home/ubuntu/Ruby/newnewpiedpiper/app/controllers/upvotes_controller.rb": [
+      "/home/ec2-user/environment/newnewpiedpiper/app/controllers/upvotes_controller.rb": [
         0,
         0,
         0,
@@ -1856,6 +1862,6 @@
         0
       ]
     },
-    "timestamp": 1551475528
+    "timestamp": 1551837569
   }
 }
