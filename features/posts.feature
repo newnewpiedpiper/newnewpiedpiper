@@ -2,7 +2,7 @@ Feature: create and view posts
 
   As a user
   So that I can make posts I am interested in
-  I want to create and view posts
+  I want to create and view posts and make comments on them
 
 Background: posts in database
 
@@ -48,9 +48,12 @@ Scenario: create a post
   Then I should see the post "Dog"
 
 Scenario: edit a post
-  Given I am viewing post with id 1
-  #And I am the creator of the "Doggo" post
-  And the post with id 1 was created less than 5 minutes ago
+  Given I am at the home page
+  When I follow "Create new post" with id "#create_post" from the sidebar
+  # Then I should see "Dog"
+  And I fill in "Title" with "Dog"
+  And I fill in "Content" with "dogs.com"
+  And I press "Create Post"
   When I follow "Edit"
   And I fill in "Title" with "Brown Doggo"
   And I press "Update Post"
